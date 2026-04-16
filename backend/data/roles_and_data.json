@@ -1,0 +1,2429 @@
+{
+    ".NET Developer": {
+        "skills_required": [
+            "Mvc",
+            ".Net Core",
+            "Linq",
+            "Visual Studio",
+            "C#",
+            ".Net Core Fundamentals",
+            ".Net Core Basics",
+            "Nunit Basics",
+            "Asp.Net",
+            "Unit Testing Basics",
+            "Asp.Net Mvc",
+            "Entity Framework Basics",
+            "Asp.Net Basics",
+            "Css",
+            "Sql Server",
+            "JavaScript",
+            ".Net Framework Basics",
+            "Vb.Net",
+            ".Net Framework",
+            "Html",
+            "Git",
+            "Razor",
+            "Vb.Net Basics"
+        ],
+        "projects": [],
+        "resources": {
+            "free": [],
+            "paid": []
+        }
+    },
+    "AI Prompt Engineer": {
+        "skills_required": [
+            "Openai Gpt Basics",
+            "Prompt Writing",
+            "Hugging Face Basics",
+            "Python",
+            "Nltk Basics",
+            "Tensorflow Basics",
+            "Pytorch Basics",
+            "Openai Gpt Intro",
+            "Openai Gpt Models Intro",
+            "Spacy Basics",
+            "Introductory Nlp",
+            "Hugging Face Transformers Basics",
+            "Critical Thinking",
+            "Openai Gpt Model Basics",
+            "Prompt Writing Fundamentals",
+            "JavaScript",
+            "Intro To Nlp",
+            "Intro Nlp",
+            "Nlp Introduction",
+            "Openai Gpt Models Exposure",
+            "Gpt Model Exposure",
+            "Nlp Basics",
+            "Gpt Models Intro"
+        ],
+        "projects": [],
+        "resources": {
+            "free": [],
+            "paid": []
+        }
+    },
+    "Android Developer Intern": {
+        "skills_required": [
+            "Sqlite",
+            "Mvc",
+            "Ui/Ux Basics",
+            "Java",
+            "Rest Api",
+            "Xml",
+            "Android Studio",
+            "Git",
+            "Rest Apis",
+            "Kotlin"
+        ],
+        "projects": [],
+        "resources": {
+            "free": [],
+            "paid": []
+        }
+    },
+    "Junior Android Developer": {
+        "skills_required": [
+            "Sqlite",
+            "Java",
+            "Rest Api",
+            "Xml",
+            "Ui/Ux Design",
+            "Android Studio",
+            "Git",
+            "Kotlin"
+        ],
+        "projects": [],
+        "resources": {
+            "free": [],
+            "paid": []
+        }
+    },
+    "Android App Developer Trainee": {
+        "skills_required": [
+            "Sqlite",
+            "Mvc",
+            "Ui/Ux Basics",
+            "Java",
+            "Android Studio",
+            "Git",
+            "Rest Apis",
+            "Kotlin"
+        ],
+        "projects": [],
+        "resources": {
+            "free": [],
+            "paid": []
+        }
+    },
+    "Entry": {
+        "skills_required": [
+            "Sqlite",
+            "Swift",
+            "Python",
+            "Subnetting",
+            "Windows Security",
+            "Cocoa Touch",
+            "Dns",
+            "Ui/Ux Basics",
+            "R",
+            "Xml",
+            "Android Studio",
+            "Feature Engineering",
+            "Xcode",
+            "Nagios",
+            "Ml Basics: Classification, Regression, Clustering, Decision Trees",
+            "Data Preprocessing",
+            "Ml Libraries: Scikit-Learn, Tensorflow, Pytorch",
+            "Statistics: Probability, Linear Algebra",
+            "Simulator",
+            "Snort",
+            "Objective-C",
+            "Git/Github",
+            "C++",
+            "Tcp/Ip",
+            "Wireshark",
+            "Material Design",
+            "Java",
+            "Rest Api",
+            "Metasploit",
+            "Risk Assessment Basics",
+            "Visualization: Matplotlib, Seaborn",
+            "Git",
+            "Kotlin"
+        ],
+        "projects": [],
+        "resources": {
+            "free": [],
+            "paid": []
+        }
+    },
+    "Associate Android Developer": {
+        "skills_required": [
+            "Sqlite",
+            "Java",
+            "Rest Api",
+            "Xml",
+            "Ui/Ux Design",
+            "Android Studio",
+            "Git",
+            "Kotlin"
+        ],
+        "projects": [],
+        "resources": {
+            "free": [],
+            "paid": []
+        }
+    },
+    "Trainee Android App Developer": {
+        "skills_required": [
+            "Sqlite",
+            "Ui/Ux Basics",
+            "Java",
+            "Rest Api",
+            "Xml",
+            "Android Studio",
+            "Git",
+            "Kotlin"
+        ],
+        "projects": [],
+        "resources": {
+            "free": [],
+            "paid": []
+        }
+    },
+    "Junior Android Engineer": {
+        "skills_required": [
+            "Sqlite",
+            "Kotlin",
+            "Java",
+            "Xml",
+            "Android Studio",
+            "Git",
+            "Rest Apis",
+            "Ui/Ux Basics"
+        ],
+        "projects": [],
+        "resources": {
+            "free": [],
+            "paid": []
+        }
+    },
+    "Android Development Intern": {
+        "skills_required": [
+            "Sqlite",
+            "Ui/Ux Basics",
+            "Java",
+            "Rest Api",
+            "Xml",
+            "Android Studio",
+            "Git",
+            "Kotlin"
+        ],
+        "projects": [],
+        "resources": {
+            "free": [],
+            "paid": []
+        }
+    },
+    "Android Developer Trainee": {
+        "skills_required": [
+            "Sqlite",
+            "Ui/Ux Basics",
+            "Java",
+            "Rest Api",
+            "Xml",
+            "Android Studio",
+            "Git",
+            "Kotlin"
+        ],
+        "projects": [],
+        "resources": {
+            "free": [],
+            "paid": []
+        }
+    },
+    "AR/VR Developer": {
+        "skills_required": [
+            "Maya Basics",
+            "Blender/Maya Basics",
+            "C++",
+            "Spatial Computing Basics",
+            "Blender Basics",
+            "C# Basics",
+            "Ui/Ux Fundamentals",
+            "Unity Basics",
+            "3D Modeling Fundamentals",
+            "Arcore Basics",
+            "Motion Tracking Basics",
+            "Unreal Engine Basics",
+            "JavaScript",
+            "3D Modeling Basics",
+            "Arkit Basics"
+        ],
+        "projects": [],
+        "resources": {
+            "free": [],
+            "paid": []
+        }
+    },
+    "Backend Developer": {
+        "skills_required": [
+            "Mysql",
+            "Cloud Basics",
+            "Python",
+            "Restful Api",
+            "Node.Js",
+            "Flask",
+            "Ci/Cd Basics",
+            "Django",
+            "Agile",
+            "Graphql Basics",
+            "Express.Js",
+            "Mongodb",
+            "Java",
+            "Postgresql",
+            "Redis",
+            "Git",
+            "Docker"
+        ],
+        "projects": [
+            {
+                "level": "Beginner",
+                "name": "REST API Project",
+                "features": [
+                    "CRUD operations",
+                    "Database connection",
+                    "Basic authentication"
+                ]
+            },
+            {
+                "level": "Intermediate",
+                "name": "Blog API",
+                "features": [
+                    "User login",
+                    "JWT auth",
+                    "Post management"
+                ]
+            }
+        ],
+        "resources": {
+            "free": [
+                "https://www.youtube.com/watch?v=Oe421EPjeBE"
+            ],
+            "paid": [
+                "https://www.udemy.com/course/nodejs-express-mongodb-bootcamp/"
+            ]
+        }
+    },
+    "Big Data Specialist": {
+        "skills_required": [
+            "SQL",
+            "Hadoop (Hdfs, Hive, Mapreduce)",
+            "Apache Nifi Basics",
+            "Nosql Basics (Mongodb, Hbase)",
+            "Scala Basics",
+            "Python",
+            "Hadoop Ecosystem Basics",
+            "Hadoop (Hdfs, Mapreduce, Hive, Pig)",
+            "Nosql Basics",
+            "Curiosity",
+            "Apache Nifi",
+            "Etl Concepts",
+            "Etl Basics",
+            "Talend",
+            "Analytical Thinking",
+            "Apache Spark Basics",
+            "Java",
+            "Spark Basics",
+            "Linux/Unix Basics",
+            "Hadoop Basics",
+            "Hadoop (Hdfs, Mapreduce, Hive)",
+            "Talend Basics"
+        ],
+        "projects": [],
+        "resources": {
+            "free": [],
+            "paid": []
+        }
+    },
+    "Blockchain Developer": {
+        "skills_required": [
+            "Corda Basics",
+            "Smart Contract Testing",
+            "Python",
+            "Smart Contract Development",
+            "Hyperledger Basics",
+            "Truffle",
+            "Hyperledger",
+            "Remix Ide Basics",
+            "Git Basics",
+            "Adaptability",
+            "Solidity Basics",
+            "Ethereum Fundamentals",
+            "Smart Contracts",
+            "C++",
+            "Ethereum Basics",
+            "Smart Contract Development And Testing",
+            "Java",
+            "Cryptography Basics",
+            "Truffle Basics",
+            "Smart Contract Implementation",
+            "Corda",
+            "Ethereum",
+            "Dapps Fundamentals",
+            "Git",
+            "Smart Contracts Basics",
+            "Remix Ide",
+            "Cryptography Fundamentals",
+            "Dapps Basics"
+        ],
+        "projects": [],
+        "resources": {
+            "free": [],
+            "paid": []
+        }
+    },
+    "Business Analyst": {
+        "skills_required": [
+            "SQL",
+            "Requirement Documentation",
+            "Data Analysis",
+            "Agile Fundamentals",
+            "Power Bi Basics",
+            "Agile Methodology Awareness",
+            "Team Collaboration",
+            "Excel",
+            "Research Skills",
+            "Basic Data Analysis",
+            "Tableau Basics",
+            "Research",
+            "Data Analysis Basics",
+            "Requirement Gathering",
+            "Sql",
+            "Documentation",
+            "Data Interpretation"
+        ],
+        "projects": [],
+        "resources": {
+            "free": [],
+            "paid": []
+        }
+    },
+    "Cloud Architect": {
+        "skills_required": [
+            "Azure Basics",
+            "Python",
+            "Kubernetes Basics",
+            "Bash Scripting",
+            "Aws Fundamentals",
+            "Gcp Basics",
+            "Cloud Security Fundamentals",
+            "Docker Introduction"
+        ],
+        "projects": [],
+        "resources": {
+            "free": [],
+            "paid": []
+        }
+    },
+    "Cloud Solutions Associate": {
+        "skills_required": [
+            "Cloud Storage Basics",
+            "Linux Administration",
+            "Java",
+            "Terraform Basics",
+            "Networking Fundamentals",
+            "Docker"
+        ],
+        "projects": [],
+        "resources": {
+            "free": [],
+            "paid": []
+        }
+    },
+    "Junior Cloud Engineer": {
+        "skills_required": [
+            "Docker Basics",
+            "Ci/Cd Introduction",
+            "Cloud Networking",
+            "Kubernetes Fundamentals",
+            "Python Scripting"
+        ],
+        "projects": [],
+        "resources": {
+            "free": [],
+            "paid": []
+        }
+    },
+    "Cloud Trainee": {
+        "skills_required": [
+            "Cloud Storage Basics",
+            "Bash",
+            "Iam Fundamentals",
+            "Python Scripting",
+            "Basic Networking"
+        ],
+        "projects": [],
+        "resources": {
+            "free": [],
+            "paid": []
+        }
+    },
+    "Associate Cloud Architect": {
+        "skills_required": [
+            "Cloud Database Basics",
+            "Azure Basics",
+            "Linux Administration",
+            "Aws Basics",
+            "Docker"
+        ],
+        "projects": [],
+        "resources": {
+            "free": [],
+            "paid": []
+        }
+    },
+    "Content Writer": {
+        "skills_required": [
+            "Tone And Style Adaptation",
+            "Ai Content Tools Awareness",
+            "Cms Familiarity",
+            "Research And Fact-Checking",
+            "Fact-Checking",
+            "Content Formatting",
+            "Writing Clarity And Grammar",
+            "Research Skills",
+            "Proofreading",
+            "Basic Seo Knowledge",
+            "Ai Writing Tool Exposure",
+            "Blog And Article Writing",
+            "Digital Marketing Basics",
+            "Adaptable Tone And Style",
+            "Ai Writing Tools Awareness",
+            "Basic Writing And Grammar",
+            "Clarity In Writing",
+            "Content Research",
+            "Seo Fundamentals",
+            "Ai Tools Exposure",
+            "Keyword Usage",
+            "Content Creation",
+            "Cms Basics",
+            "Editing And Proofreading",
+            "Digital Marketing Awareness",
+            "Seo Basics",
+            "Writing And Grammar",
+            "Ai Tool Awareness",
+            "Adaptation Of Tone And Style",
+            "Research",
+            "Time Management",
+            "Grammar And Punctuation",
+            "Wordpress Basics",
+            "Writing Clarity",
+            "Communication Skills",
+            "Basic Seo"
+        ],
+        "projects": [],
+        "resources": {
+            "free": [],
+            "paid": []
+        }
+    },
+    "Copywriter": {
+        "skills_required": [
+            "Proofreading And Editing",
+            "Tone And Style Adaptation",
+            "Storytelling",
+            "Basic Seo Practices",
+            "Cms Familiarity",
+            "Ai-Assisted Writing Tools",
+            "Research And Fact-Checking",
+            "Creativity And Storytelling",
+            "Seo Basics",
+            "Team Collaboration",
+            "Grammar And Punctuation Mastery",
+            "Cms Usage",
+            "Adaptable Writing Style",
+            "Research And Accuracy",
+            "Content Editing And Proofreading",
+            "Ai Writing Tool Awareness",
+            "Basic Seo Knowledge",
+            "Familiarity With Digital Marketing Channels",
+            "Time Management",
+            "Clear And Persuasive Writing",
+            "Grammar And Punctuation",
+            "Persuasive Writing",
+            "Ai Writing Tools Awareness",
+            "Persuasive Copywriting",
+            "Content Research",
+            "Email And Social Media Familiarity",
+            "Ai Writing Tools",
+            "Basic Seo",
+            "Cms Basics (Wordpress, Hubspot)"
+        ],
+        "projects": [],
+        "resources": {
+            "free": [],
+            "paid": []
+        }
+    },
+    "Cybersecurity Analyst": {
+        "skills_required": [
+            "Incident Response",
+            "Snort",
+            "Python",
+            "Linux Basics",
+            "C++",
+            "Encryption Basics",
+            "Wireshark",
+            "Firewall Configuration",
+            "Nessus"
+        ],
+        "projects": [],
+        "resources": {
+            "free": [],
+            "paid": []
+        }
+    },
+    "Junior Security Analyst": {
+        "skills_required": [
+            "Windows Security",
+            "Wireshark",
+            "Metasploit",
+            "Team Collaboration",
+            "Cryptography Fundamentals",
+            "Iso 27001 Basics",
+            "JavaScript"
+        ],
+        "projects": [],
+        "resources": {
+            "free": [],
+            "paid": []
+        }
+    },
+    "Cybersecurity Intern": {
+        "skills_required": [
+            "Snort",
+            "Python",
+            "Nist Basics",
+            "Linux Fundamentals",
+            "Antivirus Tools",
+            "Vulnerability Assessment"
+        ],
+        "projects": [],
+        "resources": {
+            "free": [],
+            "paid": []
+        }
+    },
+    "Associate Cybersecurity Analyst": {
+        "skills_required": [
+            "Incident Response",
+            "Linux Security",
+            "Wireshark",
+            "Gdpr Basics",
+            "Firewall Basics"
+        ],
+        "projects": [],
+        "resources": {
+            "free": [],
+            "paid": []
+        }
+    },
+    "Trainee Security Analyst": {
+        "skills_required": [
+            "Network Security Basics",
+            "Python",
+            "Nessus",
+            "Linux Commands",
+            "Gdpr Basics"
+        ],
+        "projects": [],
+        "resources": {
+            "free": [],
+            "paid": []
+        }
+    },
+    "Cybersecurity Support Analyst": {
+        "skills_required": [
+            "Wireshark",
+            "Firewall Rules",
+            "Cryptography Basics",
+            "Iso 27001 Basics"
+        ],
+        "projects": [],
+        "resources": {
+            "free": [],
+            "paid": []
+        }
+    },
+    "Graduate Security Analyst": {
+        "skills_required": [
+            "Snort",
+            "Python",
+            "Nist Basics",
+            "Antivirus",
+            "Windows/Linux Basics"
+        ],
+        "projects": [],
+        "resources": {
+            "free": [],
+            "paid": []
+        }
+    },
+    "Cybersecurity Trainee": {
+        "skills_required": [
+            "Linux Security",
+            "C++",
+            "Wireshark",
+            "Metasploit",
+            "Encryption Fundamentals"
+        ],
+        "projects": [],
+        "resources": {
+            "free": [],
+            "paid": []
+        }
+    },
+    "Information Security Analyst": {
+        "skills_required": [
+            "Snort",
+            "Python",
+            "Nessus",
+            "Gdpr Basics",
+            "Firewall Basics"
+        ],
+        "projects": [],
+        "resources": {
+            "free": [],
+            "paid": []
+        }
+    },
+    "Data Engineer": {
+        "skills_required": [
+            "Azure Basics",
+            "Mysql",
+            "Python",
+            "Scala Basics",
+            "Etl Tools Introduction",
+            "Azure Fundamentals",
+            "Spark Fundamentals",
+            "Aws S3 Basics",
+            "Linux",
+            "Hadoop Fundamentals",
+            "Etl Basics",
+            "Airflow Basics",
+            "Analytical Thinking",
+            "Mongodb",
+            "Sql",
+            "Airflow Fundamentals",
+            "Data Structures",
+            "Java",
+            "Postgresql",
+            "Spark Basics",
+            "Aws Beginner",
+            "Aws Cloud Basics",
+            "Aws Basics",
+            "Hadoop Basics",
+            "Data Modeling Basics",
+            "Etl Fundamentals"
+        ],
+        "projects": [],
+        "resources": {
+            "free": [],
+            "paid": []
+        }
+    },
+    "Data Scientist": {
+        "skills_required": [
+            "Mysql",
+            "Basic Ml Algorithms: Regression, Classification, Clustering",
+            "Python",
+            "Numpy",
+            "Sql",
+            "Mongodb",
+            "R",
+            "Postgresql",
+            "Data Wrangling",
+            "Pandas",
+            "Basic Ml: Classification, Regression, Clustering",
+            "Data Preprocessing",
+            "Matplotlib",
+            "Seaborn"
+        ],
+        "projects": [],
+        "resources": {
+            "free": [],
+            "paid": []
+        }
+    },
+    "Junior Data Scientist": {
+        "skills_required": [
+            "Mysql",
+            "Python",
+            "Numpy",
+            "Sql",
+            "R",
+            "Postgresql",
+            "Basic Ml: Logistic Regression, Decision Trees, K-Means",
+            "Pandas",
+            "Excel",
+            "Matplotlib",
+            "Seaborn"
+        ],
+        "projects": [],
+        "resources": {
+            "free": [],
+            "paid": []
+        }
+    },
+    "Data Analyst / Data Scientist Intern": {
+        "skills_required": [
+            "Mysql",
+            "Basic Ml: Classification, Clustering",
+            "Python",
+            "Numpy",
+            "Sql",
+            "Mongodb",
+            "R",
+            "Pandas",
+            "Matplotlib",
+            "Seaborn"
+        ],
+        "projects": [],
+        "resources": {
+            "free": [],
+            "paid": []
+        }
+    },
+    "Junior Machine Learning Engineer": {
+        "skills_required": [
+            "Basic Ml Models: Decision Trees, K-Means, Logistic Regression",
+            "Mysql",
+            "Git/Github",
+            "Python",
+            "Numpy",
+            "Sql",
+            "Mongodb",
+            "Data Visualization: Matplotlib, Seaborn",
+            "Java",
+            "R",
+            "Ml Fundamentals: Regression, Classification, Clustering, Decision Trees",
+            "Feature Engineering",
+            "Ml Frameworks: Scikit-Learn, Tensorflow, Pytorch, Keras",
+            "Pandas",
+            "Data Preprocessing",
+            "Matplotlib",
+            "Seaborn",
+            "Statistics: Probability, Linear Algebra"
+        ],
+        "projects": [],
+        "resources": {
+            "free": [],
+            "paid": []
+        }
+    },
+    "Entry Level Data Scientist": {
+        "skills_required": [
+            "Mysql",
+            "Python",
+            "Data Cleaning",
+            "Numpy",
+            "Sql",
+            "Mongodb",
+            "R",
+            "Postgresql",
+            "Data Wrangling",
+            "Pandas",
+            "Basic Ml: Classification, Regression, Clustering",
+            "Matplotlib",
+            "Seaborn"
+        ],
+        "projects": [],
+        "resources": {
+            "free": [],
+            "paid": []
+        }
+    },
+    "Data Science Intern": {
+        "skills_required": [
+            "Mysql",
+            "Python",
+            "Matplotlib",
+            "Numpy",
+            "Sql",
+            "R",
+            "Postgresql",
+            "Data Wrangling",
+            "Pandas",
+            "Data Preprocessing",
+            "Basic Ml: Logistic Regression, Clustering, Decision Trees",
+            "Seaborn"
+        ],
+        "projects": [],
+        "resources": {
+            "free": [],
+            "paid": []
+        }
+    },
+    "Fresher Data Scientist": {
+        "skills_required": [
+            "Mysql",
+            "Python",
+            "Mongodb",
+            "Sql",
+            "Numpy",
+            "R",
+            "Pandas",
+            "Basic Ml: Classification, Regression, Clustering",
+            "Matplotlib",
+            "Seaborn"
+        ],
+        "projects": [],
+        "resources": {
+            "free": [],
+            "paid": []
+        }
+    },
+    "Data Science Associate": {
+        "skills_required": [
+            "Mysql",
+            "Python",
+            "Data Cleaning",
+            "Numpy",
+            "Sql",
+            "R",
+            "Postgresql",
+            "Basic Ml: Regression, Classification, Clustering",
+            "Pandas",
+            "Data Preprocessing",
+            "Matplotlib",
+            "Seaborn"
+        ],
+        "projects": [],
+        "resources": {
+            "free": [],
+            "paid": []
+        }
+    },
+    "DevOps Engineer": {
+        "skills_required": [
+            "Azure Basics",
+            "Terraform Awareness",
+            "Linux Basics",
+            "Python",
+            "Ci/Cd Basics",
+            "Linux Fundamentals",
+            "Aws Awareness",
+            "Terraform/Ansible Awareness",
+            "Python Fundamentals",
+            "Ansible Awareness",
+            "Kubernetes",
+            "Bash Basics",
+            "Azure Awareness",
+            "Github/Gitlab",
+            "Jenkins",
+            "Gcp Awareness",
+            "Aws Basics",
+            "Git",
+            "Gcp Basics",
+            "Docker",
+            "Bash"
+        ],
+        "projects": [],
+        "resources": {
+            "free": [],
+            "paid": []
+        }
+    },
+    "Digital Marketing Specialist": {
+        "skills_required": [
+            "Instagram And Linkedin Marketing Basics",
+            "Google Ads Basics",
+            "Content Creation",
+            "Google Ads And Facebook Ads Basics",
+            "Blogging And Copywriting",
+            "Google Ads",
+            "Basic Marketing Automation",
+            "Cms (Wordpress)",
+            "Digital Advertising Basics",
+            "Email Marketing Tools Basics",
+            "Team Collaboration",
+            "Seo And Sem Fundamentals",
+            "Adaptability",
+            "Facebook Ads Manager Basics",
+            "Blogging",
+            "Cms Knowledge",
+            "Copywriting",
+            "Content Creation And Copywriting",
+            "Cms (Wordpress) Basics",
+            "Facebook Ads Manager",
+            "Instagram, Linkedin Basics",
+            "Sem Basics",
+            "Social Media Marketing Basics",
+            "Cms Tools",
+            "Google Analytics Basics",
+            "Linkedin Marketing Basics",
+            "Email Marketing Tools (Mailchimp, Hubspot) Basics",
+            "Social Media Marketing",
+            "Cms Tools (Wordpress)",
+            "Instagram Marketing Basics",
+            "Seo/Sem Fundamentals",
+            "Seo Fundamentals",
+            "Communication Skills",
+            "Google Analytics",
+            "Email Marketing Basics",
+            "Email Marketing (Mailchimp, Hubspot Basics)"
+        ],
+        "projects": [],
+        "resources": {
+            "free": [],
+            "paid": []
+        }
+    },
+    "Ethical Hacker": {
+        "skills_required": [
+            "Ethical Mindset",
+            "Familiarity With Nmap, Sqlmap",
+            "Python",
+            "Ethical Awareness",
+            "Web Application Security Basics",
+            "Linux (Kali Linux/Parrot Os) Basics",
+            "Basic Cryptography Understanding",
+            "Vulnerability Scanning Basics",
+            "Basic Knowledge Of Nmap, Burp Suite",
+            "Familiarity With Metasploit, Wireshark",
+            "Networking Fundamentals",
+            "Linux And Windows Os Basics",
+            "Linux/Windows Os Fundamentals",
+            "Basic Cryptography Knowledge",
+            "Windows Security Basics",
+            "Vulnerability Assessment",
+            "Linux (Kali/Parrot Os) Basics",
+            "Networking Basics",
+            "Familiarity With Nmap And Wireshark",
+            "Penetration Testing Fundamentals",
+            "Web App Security Basics",
+            "Analytical Thinking",
+            "Introduction To Penetration Testing",
+            "Familiarity With Metasploit And Burp Suite",
+            "Basic Vulnerability Assessment",
+            "Bash Scripting",
+            "Bash Scripting Basics",
+            "Introductory Penetration Testing",
+            "Ethical Compliance",
+            "Vulnerability Scanning",
+            "Web Application Security",
+            "Cryptography Fundamentals",
+            "Vulnerability Assessment Basics"
+        ],
+        "projects": [],
+        "resources": {
+            "free": [],
+            "paid": []
+        }
+    },
+    "Fintech Engineer": {
+        "skills_required": [
+            "SQL",
+            "Azure Basics",
+            "Python",
+            "Intro To Ml",
+            "Cloud Basics (Aws/Azure)",
+            "Cybersecurity Basics",
+            "Financial Products Understanding",
+            "Financial Products Knowledge",
+            "Adaptability",
+            "Intro To Machine Learning",
+            "JavaScript",
+            "Blockchain Fundamentals",
+            "Introductory Machine Learning",
+            "Data Analysis Basics",
+            "Agility",
+            "Introductory Data Science",
+            "Api Integration Basics",
+            "Sql Fundamentals",
+            "Api Integration Fundamentals",
+            "Financial Domain Knowledge",
+            "Blockchain Basics",
+            "Aws Basics",
+            "Financial Knowledge Basics",
+            "Machine Learning Basics",
+            "Cybersecurity Awareness",
+            "Introductory Ml",
+            "Aws/Azure Basics",
+            "Cybersecurity Fundamentals"
+        ],
+        "projects": [],
+        "resources": {
+            "free": [],
+            "paid": []
+        }
+    },
+    "Full Stack Developer": {
+        "skills_required": [
+            "Nosql",
+            "Vue.Js",
+            "Mysql",
+            "Javascript",
+            "Node.Js",
+            "Flask",
+            "Css3",
+            "Django",
+            "Html5",
+            "React",
+            "Css",
+            "Angular",
+            "Sql",
+            "Mongodb",
+            "Postgresql",
+            "Javascript (Es6+)",
+            "Html",
+            "Django/Flask",
+            "Git",
+            "Python (Django/Flask)"
+        ],
+        "projects": [],
+        "resources": {
+            "free": [],
+            "paid": []
+        }
+    },
+    "Game Developer": {
+        "skills_required": [
+            "Game Mechanics Fundamentals",
+            "Python",
+            "Physics Basics",
+            "C# Basics",
+            "Mobile/Console Platform Awareness",
+            "Unity Basics",
+            "Unreal Engine Basics",
+            "Git Basics",
+            "Adaptability",
+            "Mobile/Console Development Basics",
+            "Debugging Basics",
+            "Game Mechanics Basics",
+            "Animation Fundamentals",
+            "C++",
+            "Mobile Game Awareness",
+            "Java",
+            "Opengl Basics",
+            "Physics And Collision Basics",
+            "Animation Basics",
+            "Directx Basics",
+            "Directx/Opengl Basics",
+            "Physics And Animation Basics"
+        ],
+        "projects": [],
+        "resources": {
+            "free": [],
+            "paid": []
+        }
+    },
+    "Graphic Designer": {
+        "skills_required": [
+            "Typography",
+            "Time Management",
+            "Basic Figma",
+            "Adobe Indesign",
+            "Adobe Illustrator",
+            "Basic Html/Css",
+            "Adaptability",
+            "Color Theory",
+            "Illustrator",
+            "Adobe Photoshop",
+            "Figma Basics",
+            "Indesign",
+            "Photoshop"
+        ],
+        "projects": [],
+        "resources": {
+            "free": [],
+            "paid": []
+        }
+    },
+    "iOS Mobile Developer": {
+        "skills_required": [
+            "Swift",
+            "Objective-C",
+            "Uikit",
+            "Cocoa Touch",
+            "Ui/Ux Design",
+            "Xcode",
+            "Json",
+            "Git",
+            "Rest Apis",
+            "Simulator"
+        ],
+        "projects": [],
+        "resources": {
+            "free": [],
+            "paid": []
+        }
+    },
+    "Junior iOS Developer": {
+        "skills_required": [
+            "Swift",
+            "Objective-C",
+            "Cocoa Touch",
+            "Git",
+            "Interface Builder",
+            "Rest Apis",
+            "Json Handling"
+        ],
+        "projects": [],
+        "resources": {
+            "free": [],
+            "paid": []
+        }
+    },
+    "iOS App Developer Intern": {
+        "skills_required": [
+            "Mvc",
+            "Swift",
+            "Cocoa Touch",
+            "Uikit",
+            "Basic Debugging",
+            "Xcode",
+            "Git"
+        ],
+        "projects": [],
+        "resources": {
+            "free": [],
+            "paid": []
+        }
+    },
+    "Graduate iOS Developer": {
+        "skills_required": [
+            "Mvc",
+            "Swift",
+            "Cocoa Touch",
+            "Uikit",
+            "Xcode",
+            "Git"
+        ],
+        "projects": [],
+        "resources": {
+            "free": [],
+            "paid": []
+        }
+    },
+    "Trainee iOS Developer": {
+        "skills_required": [
+            "Swift",
+            "Cocoa Touch",
+            "Json Handling",
+            "Xcode",
+            "Rest Apis",
+            "Simulator"
+        ],
+        "projects": [],
+        "resources": {
+            "free": [],
+            "paid": []
+        }
+    },
+    "Junior Swift Developer": {
+        "skills_required": [
+            "Swift",
+            "Objective-C Basics",
+            "Xcode",
+            "Git",
+            "Ui/Ux Guidelines"
+        ],
+        "projects": [],
+        "resources": {
+            "free": [],
+            "paid": []
+        }
+    },
+    "iOS Developer Trainee": {
+        "skills_required": [
+            "Swift",
+            "Cocoa Touch",
+            "Uikit",
+            "Xcode",
+            "Simulator"
+        ],
+        "projects": [],
+        "resources": {
+            "free": [],
+            "paid": []
+        }
+    },
+    "Associate iOS Engineer": {
+        "skills_required": [
+            "Swift",
+            "Objective-C",
+            "Json",
+            "Git",
+            "Rest Apis"
+        ],
+        "projects": [],
+        "resources": {
+            "free": [],
+            "paid": []
+        }
+    },
+    "iOS Junior Developer": {
+        "skills_required": [
+            "Mvc",
+            "Swift",
+            "Cocoa Touch",
+            "Xcode",
+            "Simulator"
+        ],
+        "projects": [],
+        "resources": {
+            "free": [],
+            "paid": []
+        }
+    },
+    "IoT Engineer": {
+        "skills_required": [
+            "Coap",
+            "Zigbee Basics",
+            "Python",
+            "Bluetooth",
+            "Lora Basics",
+            "Mqtt Basics",
+            "Ipv6 Basics",
+            "C Basics",
+            "Bluetooth And Zigbee Protocols",
+            "Power Bi Basics",
+            "Agile Methodology Awareness",
+            "Google Cloud Iot Basics",
+            "Embedded Firmware Understanding",
+            "Agile Awareness",
+            "Mqtt",
+            "Embedded Systems Design",
+            "Aws Iot Basics",
+            "Tableau Basics",
+            "Zigbee",
+            "C++",
+            "Java",
+            "Azure Iot Basics",
+            "Embedded Systems Development",
+            "Coap Basics",
+            "Actuator Integration",
+            "Tcp/Ip Basics",
+            "Sensor And Actuator Integration",
+            "Sensor Integration",
+            "Cloud Iot Basics"
+        ],
+        "projects": [],
+        "resources": {
+            "free": [],
+            "paid": []
+        }
+    },
+    "JavaScript Developer": {
+        "skills_required": [
+            "Html5 Basics",
+            "Responsive Design",
+            "React Basics",
+            "Javascript Es6+",
+            "Css3",
+            "Team Collaboration",
+            "Git Basics",
+            "Adaptability",
+            "Angular Basics",
+            "Html5",
+            "React",
+            "Rest Api Basics",
+            "Css3 Basics",
+            "Core Javascript Es6+",
+            "Async Programming",
+            "Vue.Js Basics",
+            "Rest Api Integration",
+            "Json",
+            "Git",
+            "Rest Api Knowledge",
+            "Ajax/Json",
+            "Ajax"
+        ],
+        "projects": [],
+        "resources": {
+            "free": [],
+            "paid": []
+        }
+    },
+    "Java Developer": {
+        "skills_required": [
+            "Database Basics",
+            "Junit",
+            "Team Collaboration",
+            "Java I/O",
+            "Css",
+            "Networking Basics",
+            "Core Java",
+            "Encapsulation",
+            "Spring Framework Basics",
+            "Spring Basics",
+            "Html",
+            "Sql (Mysql/Postgresql)",
+            "Git",
+            "Polymorphism",
+            "SQL",
+            "Exception Handling",
+            "Jdbc",
+            "Javascript",
+            "Gradle",
+            "Junit Basics",
+            "Multithreading Basics",
+            "Oop",
+            "Html/Css",
+            "Problem Solving",
+            "Collections Framework",
+            "Testng Basics",
+            "Sql Queries",
+            "JavaScript",
+            "Maven",
+            "Inheritance",
+            "Java Apis",
+            "Concurrency Basics",
+            "Hibernate Basics",
+            "Version Control (Git)",
+            "Database Management",
+            "Basic Rest Api Knowledge",
+            "Jsp",
+            "Testng",
+            "Java Collections",
+            "File Handling",
+            "Servlets"
+        ],
+        "projects": [],
+        "resources": {
+            "free": [],
+            "paid": []
+        }
+    },
+    "Marketing Specialist": {
+        "skills_required": [
+            "Email Campaigns",
+            "Content Creation",
+            "Ppc Ads",
+            "Marketing Automation Tools (Mailchimp, Hubspot)",
+            "Video Production Basics",
+            "Digital Marketing Fundamentals",
+            "Seo Basics",
+            "Team Collaboration",
+            "Email Marketing Tools",
+            "Social Media Basics",
+            "Blogging",
+            "Copywriting",
+            "Marketing Analytics",
+            "Adobe Creative Suite Basics",
+            "Event Coordination",
+            "Event Management",
+            "Canva And Wordpress Basics",
+            "Social Media Platforms",
+            "Seo, Sem, Ppc",
+            "Sem Basics",
+            "Seo/Sem",
+            "Content Marketing",
+            "Google Analytics Basics",
+            "Data Analysis Basics",
+            "Canva And Adobe Creative Suite",
+            "Time Management",
+            "Team Communication",
+            "Ppc Campaigns",
+            "Social Media Marketing",
+            "Marketing Automation",
+            "Market Research",
+            "Creative Design Tools",
+            "Collaboration And Communication",
+            "Social Media Management",
+            "Google Analytics",
+            "Email Marketing Basics"
+        ],
+        "projects": [],
+        "resources": {
+            "free": [],
+            "paid": []
+        }
+    },
+    "Market Research Analyst": {
+        "skills_required": [
+            "Qualitative Research",
+            "Basic Statistical Analysis",
+            "Data Analysis Basics",
+            "Data Collection",
+            "Presentation Skills",
+            "Time Management",
+            "Survey Design",
+            "Excel Advanced Functions",
+            "Data Visualization Basics",
+            "Consumer Behavior Analysis",
+            "Attention To Detail",
+            "Excel",
+            "Report Writing",
+            "Critical Thinking"
+        ],
+        "projects": [],
+        "resources": {
+            "free": [],
+            "paid": []
+        }
+    },
+    "Machine Learning Engineer": {
+        "skills_required": [
+            "Git/Github",
+            "Python",
+            "Data Visualization: Matplotlib, Seaborn",
+            "Java",
+            "R",
+            "Ml Fundamentals: Supervised/Unsupervised Learning, Regression, Classification, Clustering, Decision Trees",
+            "Feature Engineering",
+            "Ml Frameworks: Scikit-Learn, Tensorflow, Pytorch, Keras",
+            "Data Preprocessing",
+            "Statistics: Probability, Linear Algebra"
+        ],
+        "projects": [],
+        "resources": {
+            "free": [],
+            "paid": []
+        }
+    },
+    "ML Engineer Intern": {
+        "skills_required": [
+            "Git/Github",
+            "Python",
+            "Data Visualization: Matplotlib, Seaborn",
+            "Java",
+            "Data Preprocessing",
+            "R",
+            "Feature Engineering",
+            "Ml Libraries: Scikit-Learn, Tensorflow, Pytorch",
+            "Statistics: Probability, Linear Algebra",
+            "Ml Fundamentals: Classification, Regression, Clustering, Supervised/Unsupervised Learning"
+        ],
+        "projects": [],
+        "resources": {
+            "free": [],
+            "paid": []
+        }
+    },
+    "Fresher ML Engineer": {
+        "skills_required": [
+            "Git/Github",
+            "Python",
+            "Data Visualization: Matplotlib, Seaborn",
+            "Java",
+            "R",
+            "Ml Fundamentals: Regression, Classification, Clustering, Decision Trees",
+            "Feature Engineering",
+            "Ml Frameworks: Scikit-Learn, Tensorflow, Pytorch, Keras",
+            "Data Preprocessing",
+            "Statistics: Probability, Linear Algebra"
+        ],
+        "projects": [],
+        "resources": {
+            "free": [],
+            "paid": []
+        }
+    },
+    "ML Engineer Trainee": {
+        "skills_required": [
+            "Git/Github",
+            "Python",
+            "Ml Fundamentals: Supervised/Unsupervised Learning, Classification, Regression, Clustering",
+            "Statistics And Probability",
+            "Java",
+            "R",
+            "Visualization: Matplotlib, Seaborn",
+            "Feature Engineering",
+            "Data Preprocessing",
+            "Ml Libraries: Scikit-Learn, Tensorflow, Pytorch, Keras"
+        ],
+        "projects": [],
+        "resources": {
+            "free": [],
+            "paid": []
+        }
+    },
+    "Junior Network Engineer": {
+        "skills_required": [
+            "Cisco Switches",
+            "Tcp/Ip",
+            "Subnetting",
+            "Dns",
+            "Cisco Routers",
+            "Wireshark",
+            "Lan/Wan",
+            "Dhcp"
+        ],
+        "projects": [],
+        "resources": {
+            "free": [],
+            "paid": []
+        }
+    },
+    "Network Support Engineer": {
+        "skills_required": [
+            "Vpn Setup",
+            "Routing Basics",
+            "Solarwinds",
+            "Ospf",
+            "Bgp (Intro)",
+            "Firewall Basics"
+        ],
+        "projects": [],
+        "resources": {
+            "free": [],
+            "paid": []
+        }
+    },
+    "Associate Network Engineer": {
+        "skills_required": [
+            "Bash Basics",
+            "Python",
+            "Subnetting",
+            "Dns",
+            "Cisco Ios",
+            "Dhcp"
+        ],
+        "projects": [],
+        "resources": {
+            "free": [],
+            "paid": []
+        }
+    },
+    "Trainee Network Engineer": {
+        "skills_required": [
+            "Tcp/Ip",
+            "Ids/Ips Intro",
+            "Lan/Wan",
+            "Firewalls Basics",
+            "Nagios Basics"
+        ],
+        "projects": [],
+        "resources": {
+            "free": [],
+            "paid": []
+        }
+    },
+    "Network Operations Center (NOC) Engineer": {
+        "skills_required": [
+            "Tcp/Ip",
+            "Network Monitoring",
+            "Solarwinds",
+            "Incident Management",
+            "Nagios"
+        ],
+        "projects": [],
+        "resources": {
+            "free": [],
+            "paid": []
+        }
+    },
+    "Junior Security & Network Engineer": {
+        "skills_required": [
+            "Ids/Ips Intro",
+            "Cisco Routers",
+            "Wireshark",
+            "Vpn",
+            "Firewall Basics"
+        ],
+        "projects": [],
+        "resources": {
+            "free": [],
+            "paid": []
+        }
+    },
+    "Graduate Network Engineer": {
+        "skills_required": [
+            "Lan/Wan",
+            "Basic Routing",
+            "Switching",
+            "Python Scripting Basics"
+        ],
+        "projects": [],
+        "resources": {
+            "free": [],
+            "paid": []
+        }
+    },
+    "Network Intern": {
+        "skills_required": [
+            "Cisco Ios",
+            "Dhcp",
+            "Subnetting",
+            "Vpn Basics"
+        ],
+        "projects": [],
+        "resources": {
+            "free": [],
+            "paid": []
+        }
+    },
+    "IT Support": {
+        "skills_required": [
+            "Lan/Wan",
+            "Dns",
+            "Network Troubleshooting",
+            "Tcp/Ip"
+        ],
+        "projects": [],
+        "resources": {
+            "free": [],
+            "paid": []
+        }
+    },
+    "Operations Manager": {
+        "skills_required": [
+            "Basic Team Coordination",
+            "Time Management",
+            "Basic Erp/Crm Knowledge",
+            "Team Coordination",
+            "Observation",
+            "Erp/Crm Basics",
+            "Basic Workflow Management",
+            "Report Preparation",
+            "Process Observation",
+            "Workflow Awareness",
+            "Reporting",
+            "Process Awareness",
+            "Adaptability",
+            "Data Reporting Basics",
+            "Workflow Observation"
+        ],
+        "projects": [],
+        "resources": {
+            "free": [],
+            "paid": []
+        }
+    },
+    "Product Designer": {
+        "skills_required": [
+            "Sketch",
+            "Typography",
+            "User Flows",
+            "Responsive Design",
+            "Prototyping",
+            "Color Theory",
+            "Basic Javascript",
+            "Css",
+            "Figma",
+            "Adobe Xd",
+            "Wireframing",
+            "Adobe Illustrator",
+            "Information Architecture Basics",
+            "Html",
+            "Prototyping Basics",
+            "User Research Basics",
+            "Adobe Photoshop"
+        ],
+        "projects": [],
+        "resources": {
+            "free": [],
+            "paid": []
+        }
+    },
+    "Product Manager": {
+        "skills_required": [
+            "Ux/Ui Awareness",
+            "Ux Principles Awareness",
+            "Tools: Jira, Figma",
+            "Market Research And Competitor Analysis",
+            "Ux Awareness",
+            "Tools: Figma, Jira, Confluence",
+            "Product Lifecycle Basics",
+            "Data Analysis (Excel, Sql Basics)",
+            "Adaptability",
+            "Basic Data Analytics",
+            "Product Lifecycle Understanding",
+            "Tools: Jira, Confluence, Figma Basics",
+            "Agile (Scrum, Kanban Basics)",
+            "Scrum And Kanban Basics",
+            "Tools: Jira, Confluence",
+            "Market Research Fundamentals",
+            "Tools: Confluence, Figma",
+            "Data Analytics Fundamentals",
+            "Product Strategy Basics",
+            "Basic Product Management Concepts",
+            "Agile Knowledge",
+            "Data Analysis And Metrics Interpretation",
+            "Customer-Centric Design Awareness",
+            "Market Research",
+            "Agile Methodologies (Scrum, Kanban)",
+            "Data Analysis (Excel, Google Analytics)",
+            "Agile Methodology Knowledge"
+        ],
+        "projects": [],
+        "resources": {
+            "free": [],
+            "paid": []
+        }
+    },
+    "Project Manager": {
+        "skills_required": [
+            "Task And Milestone Tracking",
+            "Budgeting Basics",
+            "Multitasking",
+            "Reporting And Documentation",
+            "Kpi Tracking",
+            "Basic Knowledge Of Waterfall And Agile",
+            "Resource Allocation Basics",
+            "Team Collaboration",
+            "Familiarity With Jira And Trello",
+            "Basic Budgeting",
+            "Adaptability",
+            "Basic Knowledge Of Project Management Methodologies (Agile, Scrum, Waterfall)",
+            "Communication And Interpersonal Skills",
+            "Kpi Tracking And Reporting Basics",
+            "Understanding Of Agile And Scrum Methodologies",
+            "Teamwork And Collaboration",
+            "Critical Thinking",
+            "Basic Budgeting And Resource Allocation",
+            "Time Management",
+            "Familiarity With Jira, Ms Project, Trello",
+            "Problem-Solving And Critical Thinking",
+            "Reporting Basics",
+            "Project Management Methodology Basics",
+            "Task Scheduling",
+            "Basic Project Planning",
+            "Familiarity With Ms Project And Trello",
+            "Reporting",
+            "Familiarity With Project Tools (Ms Project, Trello)",
+            "Basic Project Planning And Scheduling",
+            "Familiarity With Microsoft Project, Jira, Trello",
+            "Understanding Of Agile, Scrum, Waterfall",
+            "Communication And Coordination",
+            "Communication Skills",
+            "Collaboration And Teamwork"
+        ],
+        "projects": [],
+        "resources": {
+            "free": [],
+            "paid": []
+        }
+    },
+    "Python Developer": {
+        "skills_required": [
+            "Css Basics",
+            "SQL",
+            "Exception Handling",
+            "Python",
+            "Pytest Basics",
+            "Data Types",
+            "Django Basics",
+            "Numpy Basics",
+            "Oop Basics",
+            "Oop",
+            "Git Basics",
+            "Adaptability",
+            "JavaScript",
+            "Functions",
+            "Pandas Basics",
+            "Html Basics",
+            "Control Flow",
+            "Fastapi Basics",
+            "Matplotlib Basics",
+            "Unittest Basics",
+            "Flask Basics",
+            "Mongodb Basics"
+        ],
+        "projects": [],
+        "resources": {
+            "free": [],
+            "paid": []
+        }
+    },
+    "Robotics Engineer": {
+        "skills_required": [
+            "Autocad",
+            "Servo Motors Basics",
+            "Sensor Integration Basics",
+            "Python",
+            "Pid Controller Fundamentals",
+            "Lidar And Ultrasonic Sensors Basics",
+            "Adaptability",
+            "Matlab Basics",
+            "Raspberry Pi Basics",
+            "Dynamics",
+            "Problem Solving",
+            "Ros Basics",
+            "Motor Control Basics",
+            "Solidworks",
+            "Lidar And Infrared Sensors Basics",
+            "Motor Control",
+            "C++",
+            "Solidworks Basics",
+            "Linear Algebra",
+            "Autocad Basics",
+            "Pid Controllers",
+            "Pid Fundamentals",
+            "Sensors Basics (Lidar, Ultrasonic, Infrared)",
+            "Embedded Systems Basics",
+            "Pid Control Basics",
+            "Arduino Basics",
+            "Kinematics"
+        ],
+        "projects": [],
+        "resources": {
+            "free": [],
+            "paid": []
+        }
+    },
+    "Sales Executive": {
+        "skills_required": [
+            "Crm Basics",
+            "Time Management",
+            "Customer Engagement",
+            "Lead Generation",
+            "Digital Sales Fundamentals",
+            "Sales Automation Awareness",
+            "Adaptability",
+            "Product Knowledge",
+            "Digital Sales Awareness",
+            "Active Listening",
+            "Relationship Building"
+        ],
+        "projects": [],
+        "resources": {
+            "free": [],
+            "paid": []
+        }
+    },
+    "SEO Specialist": {
+        "skills_required": [
+            "Crawlability Checks",
+            "Content Optimization Basics",
+            "Content Optimization",
+            "Google Analytics Ga4",
+            "Google Search Console",
+            "Seo Copywriting",
+            "Basic Html/Css",
+            "Local Seo Basics",
+            "Local Seo",
+            "Site Indexing Basics",
+            "Keyword Research",
+            "On-Page Seo",
+            "Html/Css Basics",
+            "Off-Page Seo",
+            "Technical Seo Basics",
+            "Google Analytics Basics",
+            "Mobile Seo Basics",
+            "Search Console Basics",
+            "Social Media Seo Basics",
+            "Page Speed Optimization",
+            "Looker Studio",
+            "Off-Page Seo Basics",
+            "On-Page Seo Basics",
+            "Html, Css, Javascript Basics",
+            "Mobile Seo",
+            "Basic Link Building",
+            "Link Building",
+            "Link Building Basics",
+            "Schema Markup Basics"
+        ],
+        "projects": [],
+        "resources": {
+            "free": [],
+            "paid": []
+        }
+    },
+    "Site Reliability Engineer": {
+        "skills_required": [
+            "Tcp/Ip Networking",
+            "Python",
+            "Linux Basics",
+            "Basic Ci/Cd Concepts",
+            "Linux Fundamentals",
+            "Networking Basics (Tcp/Ip, Dns)",
+            "Adaptability",
+            "Networking Fundamentals",
+            "Monitoring Basics (Prometheus/Grafana/Nagios)",
+            "Analytical Thinking",
+            "Tcp/Ip Networking Basics",
+            "Containerization Basics (Docker)",
+            "Cloud Fundamentals (Aws/Azure/Gcp)",
+            "Linux Administration Basics",
+            "Bash Scripting Basics",
+            "Basic Ci/Cd",
+            "Basic Automation Scripts",
+            "Windows Os Basics",
+            "Windows Fundamentals",
+            "Intro To Monitoring (Prometheus/Grafana)",
+            "Monitoring Basics (Nagios, Grafana)",
+            "Monitoring Tools Intro (Prometheus, Grafana)",
+            "Basic Monitoring (Nagios, Grafana)",
+            "Ci/Cd Fundamentals",
+            "Shell Scripting (Bash/Zsh)",
+            "Kubernetes Basics",
+            "Linux Os Basics",
+            "Windows Os Fundamentals",
+            "Docker Introduction",
+            "Cloud Platforms Basics (Aws/Azure/Gcp)",
+            "Cloud Fundamentals (Aws, Gcp, Azure)",
+            "Introduction To Cloud Platforms",
+            "Time Management",
+            "Docker Basics",
+            "Cloud Platform Basics (Aws/Azure/Gcp)",
+            "Linux Administration Fundamentals",
+            "Kubernetes Introduction",
+            "Bash/Shell Scripting",
+            "Shell Scripting",
+            "Docker Fundamentals"
+        ],
+        "projects": [],
+        "resources": {
+            "free": [],
+            "paid": []
+        }
+    },
+    "Software Developer": {
+        "skills_required": [
+            "Nosql",
+            "Azure Basics",
+            "Swift",
+            "Python",
+            "Javascript",
+            "Android Studio",
+            "Xcode",
+            "React",
+            "Css",
+            "Analytical Thinking",
+            "C++",
+            "Sql",
+            "Angular",
+            "Java",
+            "Html",
+            "Aws Basics",
+            "Git",
+            "Ml Libraries (Scikit-Learn, Pandas)",
+            "Kotlin"
+        ],
+        "projects": [],
+        "resources": {
+            "free": [],
+            "paid": []
+        }
+    },
+    "Software Engineer": {
+        "skills_required": [
+            "Vue.Js",
+            "Visual Studio",
+            "Python",
+            "Node.Js",
+            "Pycharm",
+            "Vs Code",
+            "Css",
+            "Github",
+            "Intellij",
+            "Azure",
+            "C++",
+            "Figma",
+            "Java",
+            "Postman",
+            "Trello",
+            "Jupyter Notebook",
+            "Html",
+            "Git",
+            "Docker",
+            "Mysql",
+            "Game Development",
+            "Javascript",
+            "Responsive Design",
+            "Cybersecurity Basics",
+            "Rust",
+            "Django",
+            "Apis",
+            "Rest Apis",
+            "Algorithms",
+            "React",
+            "Unity",
+            "Jira",
+            "Data Structures",
+            "Sql",
+            "Mongodb",
+            "Angular",
+            "Machine Learning Basics",
+            "Iot Basics"
+        ],
+        "projects": [],
+        "resources": {
+            "free": [],
+            "paid": []
+        }
+    },
+    "Software Tester (SDET)": {
+        "skills_required": [
+            "Selenium Basics",
+            "Python",
+            "Postman Basics",
+            "Functional Testing",
+            "C# Basics",
+            "Jenkins Basics",
+            "Api Testing Basics",
+            "Attention To Detail",
+            "Agile/Scrum Understanding",
+            "Regression Testing",
+            "Selenium Webdriver Basics",
+            "Functional And Regression Testing",
+            "Jmeter Basics",
+            "Java",
+            "Postman",
+            "Cypress Basics",
+            "Agile Understanding",
+            "Basic Jenkins",
+            "Agile/Scrum Knowledge",
+            "Api Testing"
+        ],
+        "projects": [],
+        "resources": {
+            "free": [],
+            "paid": []
+        }
+    },
+    "Solutions Architect": {
+        "skills_required": [
+            "Google Cloud Fundamentals",
+            "Azure Basics",
+            "Python",
+            "Ci/Cd Basics",
+            "Team Collaboration",
+            "Basic Container Orchestration Knowledge",
+            "Javascript Fundamentals",
+            "Docker/Kubernetes Fundamentals",
+            "Docker/Kubernetes Basics",
+            "Basic Microservices Understanding",
+            "Java",
+            "Basic Security Awareness",
+            "Aws Basics",
+            "Introductory Microservices Knowledge",
+            "Basic Ci/Cd",
+            "Gcp Basics",
+            "Basic Architecture Design",
+            "Basic Ci/Cd And Devops Exposure",
+            "Ci/Cd Fundamentals",
+            "Azure Fundamentals",
+            "Introductory Docker/Kubernetes Knowledge",
+            "Aws Fundamentals",
+            "Introductory Node.Js Knowledge",
+            "Gcp Fundamentals",
+            "Python Fundamentals",
+            "Introductory Security Awareness",
+            "Ci/Cd Introduction",
+            "Node.Js Basics",
+            "Java Fundamentals",
+            "Kubernetes Fundamentals",
+            "Basic Security And Compliance Awareness",
+            "Docker Fundamentals"
+        ],
+        "projects": [],
+        "resources": {
+            "free": [],
+            "paid": []
+        }
+    },
+    "System Engineer": {
+        "skills_required": [
+            "Windows Server",
+            "Virtualbox",
+            "Python",
+            "Networking Fundamentals",
+            "Vmware",
+            "Linux",
+            "Monitoring Tools",
+            "Networking Basics"
+        ],
+        "projects": [],
+        "resources": {
+            "free": [],
+            "paid": []
+        }
+    },
+    "Junior System Engineer": {
+        "skills_required": [
+            "Virtualbox",
+            "Aws Fundamentals",
+            "Tcp/Ip",
+            "Linux Basics",
+            "Python",
+            "Windows Server Basics",
+            "Vmware",
+            "Bash Scripting"
+        ],
+        "projects": [],
+        "resources": {
+            "free": [],
+            "paid": []
+        }
+    },
+    "System Engineer Trainee": {
+        "skills_required": [
+            "Windows Server",
+            "Networking",
+            "Python",
+            "Azure Fundamentals",
+            "Monitoring Tools"
+        ],
+        "projects": [],
+        "resources": {
+            "free": [],
+            "paid": []
+        }
+    },
+    "Associate System Engineer": {
+        "skills_required": [
+            "Tcp/Ip",
+            "Vmware",
+            "Linux Administration Basics",
+            "Perl Basics",
+            "Cloud Concepts"
+        ],
+        "projects": [],
+        "resources": {
+            "free": [],
+            "paid": []
+        }
+    },
+    "System Engineer Intern": {
+        "skills_required": [
+            "Networking",
+            "Cloud Basics",
+            "Linux Basics",
+            "Monitoring Tools",
+            "Scripting Fundamentals"
+        ],
+        "projects": [],
+        "resources": {
+            "free": [],
+            "paid": []
+        }
+    },
+    "Technical Writer": {
+        "skills_required": [
+            "Proofreading",
+            "Time Management",
+            "Cms Basics",
+            "Technical Accuracy",
+            "Grammar And Style",
+            "Clear Writing",
+            "Markdown",
+            "Basic Html/Css",
+            "Attention To Detail",
+            "Adaptability",
+            "Basic Html",
+            "Research Skills",
+            "Interviewing Smes"
+        ],
+        "projects": [],
+        "resources": {
+            "free": [],
+            "paid": []
+        }
+    },
+    "UI Designer": {
+        "skills_required": [
+            "Sketch",
+            "Typography",
+            "Ui Basics",
+            "Prototyping",
+            "Responsive Design",
+            "Color Theory",
+            "Illustrator",
+            "Css",
+            "Figma",
+            "Adobe Xd",
+            "Wireframing",
+            "Responsive Layouts",
+            "Html",
+            "Branding",
+            "Ui/Ux Design Basics",
+            "Usability Basics",
+            "Branding Basics",
+            "Photoshop"
+        ],
+        "projects": [],
+        "resources": {
+            "free": [],
+            "paid": []
+        }
+    },
+    "UX Designer": {
+        "skills_required": [
+            "Css Basics",
+            "Sketch",
+            "Typography",
+            "User Research",
+            "Prototyping",
+            "Html Basics",
+            "Figma",
+            "Adobe Xd",
+            "Wireframing",
+            "Color Theory"
+        ],
+        "projects": [],
+        "resources": {
+            "free": [],
+            "paid": []
+        }
+    },
+    "Junior UX Designer": {
+        "skills_required": [
+            "Figma",
+            "Adobe Xd",
+            "Wireframing",
+            "Invision",
+            "Layout Design",
+            "Information Architecture",
+            "Color Theory",
+            "Basic Usability Testing"
+        ],
+        "projects": [],
+        "resources": {
+            "free": [],
+            "paid": []
+        }
+    },
+    "Associate UX Designer": {
+        "skills_required": [
+            "Sketch",
+            "Typography",
+            "Prototyping",
+            "Figma",
+            "Adobe Xd",
+            "Wireframes",
+            "Team Collaboration",
+            "User Research Basics"
+        ],
+        "projects": [],
+        "resources": {
+            "free": [],
+            "paid": []
+        }
+    },
+    "Trainee UX Designer": {
+        "skills_required": [
+            "Css Basics",
+            "Html Basics",
+            "Prototyping",
+            "Figma",
+            "Adobe Xd",
+            "Wireframing",
+            "Invision"
+        ],
+        "projects": [],
+        "resources": {
+            "free": [],
+            "paid": []
+        }
+    },
+    "UX Intern": {
+        "skills_required": [
+            "Sketch",
+            "Usability Testing",
+            "Typography",
+            "Figma",
+            "Adobe Xd",
+            "Color Theory"
+        ],
+        "projects": [],
+        "resources": {
+            "free": [],
+            "paid": []
+        }
+    },
+    "Junior Interaction Designer": {
+        "skills_required": [
+            "Sketch",
+            "Typography",
+            "User Research Fundamentals",
+            "Adobe Xd",
+            "Figma",
+            "Prototyping Basics"
+        ],
+        "projects": [],
+        "resources": {
+            "free": [],
+            "paid": []
+        }
+    },
+    "Junior UX Analyst": {
+        "skills_required": [
+            "Prototyping",
+            "Figma",
+            "Wireframes",
+            "Invision",
+            "User Research Basics"
+        ],
+        "projects": [],
+        "resources": {
+            "free": [],
+            "paid": []
+        }
+    },
+    "UX Apprentice": {
+        "skills_required": [
+            "Sketch",
+            "Prototyping",
+            "Figma",
+            "Adobe Xd",
+            "Information Architecture Basics"
+        ],
+        "projects": [],
+        "resources": {
+            "free": [],
+            "paid": []
+        }
+    },
+    "UX Trainee Designer": {
+        "skills_required": [
+            "Typography",
+            "User Flows",
+            "Prototyping",
+            "Figma",
+            "Adobe Xd"
+        ],
+        "projects": [],
+        "resources": {
+            "free": [],
+            "paid": []
+        }
+    },
+    "UX Design Intern": {
+        "skills_required": [
+            "Sketch",
+            "Prototyping",
+            "Wireframes",
+            "Figma",
+            "Adobe Xd"
+        ],
+        "projects": [],
+        "resources": {
+            "free": [],
+            "paid": []
+        }
+    },
+    "Web Developer": {
+        "skills_required": [
+            "Github Basics",
+            "Python",
+            "Responsive Design",
+            "Javascript",
+            "React Basics",
+            "Ui/Ux Fundamentals",
+            "Css3",
+            "Php Basics",
+            "Rest Apis",
+            "Restful Apis",
+            "Angular Basics",
+            "Html5",
+            "Mysql Basics",
+            "Node.Js Basics",
+            "Vue.Js Basics",
+            "Json",
+            "Git",
+            "Ajax",
+            "Mongodb Basics"
+        ],
+        "projects": [],
+        "resources": {
+            "free": [],
+            "paid": []
+        }
+    }
+}

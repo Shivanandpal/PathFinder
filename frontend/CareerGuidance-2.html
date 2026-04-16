@@ -1,0 +1,1100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<link rel="icon" href="data:,">
+<title>Pathfinder — Career Guidance</title>
+<style>
+:root {
+  --bg:#070d16; --surface:#0b1520; --deep:#0e1b2b; --border:#1a2535;
+  --accent:#00FFB2; --accent-d:rgba(0,255,178,.10);
+  --text:#cdd6e0; --muted:#8892a4; --faint:#3d4f63; --white:#e8f0fb;
+  --danger:#FF6B6B; --warn:#FFD93D; --purple:#A78BFA; --blue:#38BDF8;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{min-height:100vh;background:var(--bg);font-family:'DM Mono','Courier New',monospace;color:var(--text);position:relative;}
+body::before{content:'';position:fixed;inset:0;background-image:linear-gradient(rgba(0,255,178,.022) 1px,transparent 1px),linear-gradient(90deg,rgba(0,255,178,.022) 1px,transparent 1px);background-size:60px 60px;pointer-events:none;z-index:0;}
+
+/* ── NAV ── */
+nav{position:sticky;top:0;z-index:200;display:flex;justify-content:space-between;align-items:center;padding:1.1rem 3rem;background:rgba(7,13,22,.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);}
+.logo{display:flex;align-items:center;gap:.5rem;cursor:pointer;}
+.logo-mark{font-size:1.3rem;color:var(--accent);}
+.logo-text{font-size:.75rem;letter-spacing:.25em;color:var(--white);font-weight:600;}
+.nav-center{display:flex;gap:2rem;}
+.nav-btn{background:none;border:none;border-bottom:1px solid transparent;cursor:pointer;font-size:.65rem;letter-spacing:.15em;color:var(--muted);padding:.2rem 0;font-family:inherit;transition:color .2s;}
+.nav-btn.active{color:var(--accent);border-bottom-color:var(--accent);}
+.nav-right{display:flex;gap:.75rem;align-items:center;}
+.nav-user{font-size:.7rem;color:var(--accent);letter-spacing:.08em;}
+.btn-sm{padding:.45rem 1.1rem;font-size:.65rem;letter-spacing:.1em;font-family:inherit;cursor:pointer;border:1px solid var(--border);background:transparent;color:var(--text);transition:border-color .2s;}
+.btn-sm:hover{border-color:var(--accent);color:var(--accent);}
+.btn-sm.filled{background:var(--accent);color:var(--bg);border-color:var(--accent);font-weight:700;}
+.btn-sm.filled:hover{opacity:.88;}
+
+/* ── PAGE ── */
+.page{position:relative;z-index:1;max-width:900px;margin:0 auto;padding:3rem 2rem 6rem;}
+.page-wide{max-width:1100px;}
+
+/* ── MODAL OVERLAY ── */
+.modal-overlay{position:fixed;inset:0;background:rgba(4,8,15,.82);z-index:500;display:none;align-items:center;justify-content:center;backdrop-filter:blur(4px);}
+.modal-overlay.open{display:flex;}
+.modal{background:var(--surface);border:1px solid var(--border);padding:2.5rem;width:100%;max-width:420px;position:relative;}
+.modal-close{position:absolute;top:1rem;right:1.25rem;background:none;border:none;color:var(--faint);font-size:1.2rem;cursor:pointer;font-family:inherit;}
+.modal-close:hover{color:var(--danger);}
+.modal-tag{font-size:.6rem;letter-spacing:.25em;color:var(--accent);margin-bottom:.5rem;}
+.modal-title{font-size:1.6rem;font-family:'DM Serif Display',Georgia,serif;font-weight:400;color:var(--white);margin-bottom:.4rem;}
+.modal-sub{font-size:.78rem;color:var(--muted);margin-bottom:1.75rem;line-height:1.6;}
+.modal-tabs{display:flex;gap:0;margin-bottom:2rem;border-bottom:1px solid var(--border);}
+.modal-tab{flex:1;background:none;border:none;border-bottom:2px solid transparent;padding:.65rem 0;font-size:.68rem;letter-spacing:.15em;color:var(--muted);cursor:pointer;font-family:inherit;transition:all .2s;margin-bottom:-1px;}
+.modal-tab.active{color:var(--accent);border-bottom-color:var(--accent);}
+.modal-field{margin-bottom:1.1rem;}
+label.lbl{font-size:.6rem;letter-spacing:.18em;color:var(--faint);margin-bottom:.4rem;display:block;}
+input[type=text],input[type=email],input[type=password],select{width:100%;background:var(--deep);border:1px solid var(--border);color:var(--text);padding:.7rem 1rem;font-family:inherit;font-size:.82rem;outline:none;transition:border-color .2s;appearance:none;}
+input[type=text]:focus,input[type=email]:focus,input[type=password]:focus,select:focus{border-color:var(--accent);}
+.modal-err{font-size:.72rem;color:var(--danger);margin-top:.4rem;min-height:1rem;}
+.modal-success{font-size:.72rem;color:var(--accent);margin-top:.4rem;}
+.modal-footer-link{font-size:.72rem;color:var(--muted);margin-top:1.25rem;text-align:center;}
+.modal-footer-link button{background:none;border:none;color:var(--accent);cursor:pointer;font-family:inherit;font-size:.72rem;}
+
+/* ── HOME HERO ── */
+.hero{text-align:center;padding:5rem 1rem 4rem;}
+.hero-badge{display:inline-block;font-size:.62rem;letter-spacing:.22em;color:var(--accent);border:1px solid rgba(0,255,178,.25);padding:.35rem 1rem;margin-bottom:2rem;}
+.hero-title{font-size:clamp(2.8rem,7vw,5.5rem);font-family:'DM Serif Display',Georgia,serif;font-weight:400;color:var(--white);line-height:1.05;margin-bottom:1.25rem;letter-spacing:-.01em;}
+.hero-accent{color:var(--accent);}
+.hero-sub{font-size:.95rem;color:var(--muted);line-height:1.8;max-width:540px;margin:0 auto 2.5rem;}
+.hero-btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-bottom:3.5rem;}
+.hero-stats{display:flex;justify-content:center;gap:4rem;flex-wrap:wrap;padding-top:2rem;border-top:1px solid var(--border);}
+.stat-num{font-size:2rem;font-family:'DM Serif Display',Georgia,serif;color:var(--white);display:block;}
+.stat-lbl{font-size:.65rem;letter-spacing:.18em;color:var(--faint);}
+
+/* ── FEATURE CARDS ── */
+.features-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.5rem;margin:4rem 0;}
+.feature-card{background:var(--surface);border:1px solid var(--border);padding:2rem;cursor:pointer;transition:border-color .25s;}
+.feature-card:hover{border-color:var(--accent);}
+.feature-icon{font-size:1.8rem;color:var(--accent);margin-bottom:1rem;}
+.feature-title{font-size:.95rem;font-weight:600;color:var(--white);margin-bottom:.6rem;letter-spacing:.05em;}
+.feature-desc{font-size:.8rem;color:var(--muted);line-height:1.7;margin-bottom:1.25rem;}
+.feature-arrow{color:var(--accent);}
+
+/* ── HOW IT WORKS ── */
+.how-section{padding:3rem 0 5rem;}
+.section-tag{font-size:.6rem;letter-spacing:.25em;color:var(--accent);margin-bottom:.75rem;text-align:center;}
+.section-title{font-size:clamp(1.6rem,4vw,2.5rem);font-family:'DM Serif Display',Georgia,serif;font-weight:400;color:var(--white);text-align:center;margin-bottom:.75rem;}
+.section-sub{font-size:.85rem;color:var(--muted);text-align:center;margin-bottom:3rem;line-height:1.7;}
+.steps-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:1.5rem;}
+.step-how{background:var(--surface);border:1px solid var(--border);padding:1.75rem;text-align:center;}
+.step-how-num{font-size:2rem;font-family:'DM Serif Display',Georgia,serif;color:var(--accent);margin-bottom:.75rem;}
+.step-how-title{font-size:.82rem;color:var(--white);margin-bottom:.5rem;letter-spacing:.05em;}
+.step-how-desc{font-size:.74rem;color:var(--muted);line-height:1.6;}
+
+/* ── CTA BANNER ── */
+.cta-banner{background:var(--surface);border:1px solid var(--border);padding:3.5rem;text-align:center;margin:2rem 0 4rem;}
+.cta-banner-title{font-size:clamp(1.4rem,3.5vw,2rem);font-family:'DM Serif Display',Georgia,serif;color:var(--white);margin-bottom:1rem;}
+.cta-banner-sub{font-size:.83rem;color:var(--muted);margin-bottom:2rem;line-height:1.7;}
+
+/* ── GUIDANCE STEP BAR ── */
+.step-bar{display:flex;align-items:center;margin-bottom:3rem;}
+.step-item{display:flex;flex-direction:column;align-items:center;gap:4px;}
+.step-circle{width:26px;height:26px;border-radius:50%;border:1px solid var(--border);background:transparent;display:flex;align-items:center;justify-content:center;font-size:.62rem;color:var(--faint);font-weight:700;transition:all .3s;cursor:default;font-family:inherit;}
+.step-circle.active{border-color:var(--accent);color:var(--accent);}
+.step-circle.done{border-color:var(--accent);background:var(--accent);color:var(--bg);cursor:pointer;}
+.step-label{font-size:.5rem;letter-spacing:.12em;color:var(--faint);white-space:nowrap;}
+.step-label.active,.step-label.done{color:var(--accent);}
+.step-line{flex:1;height:1px;background:var(--border);margin:0 5px 14px;transition:background .3s;}
+.step-line.done{background:var(--accent);}
+
+/* ── TYPOGRAPHY ── */
+.tag{font-size:.6rem;letter-spacing:.25em;color:var(--accent);margin-bottom:.6rem;}
+h1{font-size:clamp(1.7rem,4vw,2.6rem);font-family:'DM Serif Display',Georgia,serif;font-weight:400;color:var(--white);line-height:1.15;margin-bottom:.4rem;}
+.sub{font-size:.82rem;color:var(--muted);margin-bottom:2rem;line-height:1.7;}
+.sub .hi{color:var(--white);}
+
+/* ── CARDS ── */
+.card{background:var(--surface);border:1px solid var(--border);padding:1.75rem;}
+
+/* ── FORM ── */
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;margin-bottom:1.25rem;}
+.skills-wrap{display:flex;flex-wrap:wrap;gap:.4rem;margin-bottom:.6rem;min-height:1rem;}
+.chip{display:inline-flex;align-items:center;gap:.35rem;padding:.25rem .65rem;border:1px solid rgba(0,255,178,.27);color:var(--accent);font-size:.72rem;font-family:inherit;}
+.chip-x{cursor:pointer;color:var(--faint);font-size:.9rem;line-height:1;background:none;border:none;font-family:inherit;}
+.chip-x:hover{color:var(--danger);}
+.ac-wrap{position:relative;}
+.ac-dropdown{position:absolute;top:100%;left:0;right:0;background:var(--deep);border:1px solid var(--border);z-index:50;max-height:200px;overflow-y:auto;display:none;}
+.ac-dropdown.open{display:block;}
+.ac-item{padding:.55rem 1rem;font-size:.8rem;cursor:pointer;color:var(--text);border-bottom:1px solid var(--border);transition:background .15s;}
+.ac-item:hover{background:var(--accent-d);}
+.hint{font-size:.67rem;color:var(--faint);margin-top:.4rem;}
+
+/* ── BUTTONS ── */
+.btn-primary{background:var(--accent);color:var(--bg);border:none;padding:.8rem 1.8rem;font-size:.72rem;letter-spacing:.12em;font-family:inherit;font-weight:700;cursor:pointer;transition:opacity .2s;}
+.btn-primary:disabled,.btn-primary.disabled{opacity:.4;cursor:not-allowed;}
+.btn-ghost{background:transparent;color:var(--text);border:1px solid var(--border);padding:.8rem 1.8rem;font-size:.72rem;letter-spacing:.12em;font-family:inherit;cursor:pointer;transition:border-color .2s;}
+.btn-ghost:hover{border-color:var(--accent);}
+.btn-row{display:flex;gap:.75rem;flex-wrap:wrap;margin-top:1.5rem;}
+
+/* ── JOB CARDS ── */
+.job-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(195px,1fr));gap:1rem;margin-bottom:2rem;}
+.job-card{background:var(--surface);border:1px solid var(--border);padding:1.25rem;cursor:pointer;transition:all .2s;}
+.job-card:hover,.job-card.selected{border-color:var(--accent);}
+.job-card.selected{background:var(--accent-d);}
+.job-card-title{font-size:.82rem;color:var(--white);margin-bottom:.3rem;}
+.job-card.selected .job-card-title{color:var(--accent);}
+.job-card-sub{font-size:.65rem;color:var(--faint);}
+
+/* ── PROGRESS ── */
+.progress-wrap{height:5px;background:var(--border);margin-bottom:1.5rem;}
+.progress-fill{height:100%;width:0;transition:width 1s;}
+
+/* ── GAP GRID ── */
+.gap-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1.25rem;margin-bottom:2rem;}
+.gap-col{background:var(--surface);padding:1.2rem;}
+.gap-title{font-size:.58rem;letter-spacing:.18em;margin-bottom:.75rem;}
+.gap-item{font-size:.76rem;margin-bottom:.35rem;}
+.gap-none{font-size:.73rem;color:var(--faint);}
+
+/* ── IMPROVE ── */
+.improve-card{background:var(--surface);border:1px solid var(--border);padding:1.5rem;margin-bottom:.75rem;}
+.improve-header{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:.5rem;margin-bottom:.6rem;}
+.improve-title{font-size:.9rem;color:var(--white);}
+.badges{display:flex;gap:.4rem;flex-wrap:wrap;}
+.badge{display:inline-block;padding:.18rem .55rem;font-size:.6rem;letter-spacing:.1em;border:1px solid transparent;}
+.resource-line{font-size:.77rem;color:var(--muted);}
+.resource-line .res-label{color:var(--faint);}
+.section-label{font-size:.6rem;color:var(--faint);letter-spacing:.2em;margin-bottom:.75rem;}
+
+/* ── APPLY NOW ── */
+.now-card{background:var(--surface);border:1px solid var(--border);padding:1.25rem;margin-bottom:.65rem;display:flex;justify-content:space-between;align-items:center;cursor:pointer;transition:border-color .2s;}
+.now-card:hover{border-color:var(--accent);}
+.now-title{font-size:.86rem;color:var(--white);margin-bottom:.2rem;}
+.now-sub{font-size:.65rem;color:var(--faint);}
+.now-right{display:flex;gap:.5rem;align-items:center;}
+.arrow{color:var(--accent);font-size:.9rem;}
+.summary-strip{display:flex;gap:2rem;flex-wrap:wrap;margin-bottom:2rem;}
+.summary-item{flex:1;min-width:140px;}
+.summary-lbl{font-size:.58rem;letter-spacing:.18em;color:var(--faint);margin-bottom:.3rem;}
+.summary-val{font-size:1rem;margin-bottom:.2rem;}
+.summary-sub{font-size:.68rem;color:var(--muted);}
+.cta-box{background:var(--surface);border:1px solid var(--border);margin-top:2rem;text-align:center;padding:2.5rem;}
+.cta-mini-tag{font-size:.58rem;letter-spacing:.2em;color:var(--accent);margin-bottom:.75rem;}
+.cta-text{font-size:1rem;font-family:'DM Serif Display',Georgia,serif;color:var(--white);margin-bottom:1.5rem;line-height:1.5;}
+.cta-btns{display:flex;gap:.75rem;justify-content:center;flex-wrap:wrap;}
+.readiness-card{background:var(--surface);border:1px solid var(--border);padding:1.75rem;margin-bottom:1.75rem;}
+.readiness-top{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:.6rem;}
+.readiness-lbl{font-size:.6rem;letter-spacing:.18em;color:var(--faint);}
+.readiness-pct{font-size:2rem;font-family:'DM Serif Display',Georgia,serif;}
+.readiness-note{font-size:.76rem;color:var(--muted);margin:0;}
+.empty-state{background:var(--surface);border:1px solid var(--border);text-align:center;padding:3rem;margin-bottom:2rem;}
+.empty-icon{font-size:2rem;color:var(--accent);margin-bottom:1rem;}
+.empty-title{font-size:1.15rem;font-family:'DM Serif Display',Georgia,serif;color:var(--white);margin-bottom:.6rem;}
+.empty-sub{color:var(--muted);font-size:.82rem;}
+
+/* ── FOOTER ── */
+footer{border-top:1px solid var(--border);padding:1.75rem 3rem;display:flex;justify-content:space-between;align-items:center;position:relative;z-index:1;flex-wrap:wrap;gap:1rem;}
+.footer-logo{display:flex;align-items:center;gap:.5rem;}
+.footer-links{display:flex;gap:2rem;}
+.footer-link{font-size:.65rem;color:var(--faint);background:none;border:none;cursor:pointer;font-family:inherit;transition:color .2s;}
+.footer-link:hover{color:var(--accent);}
+.footer-copy{font-size:.65rem;color:var(--faint);}
+
+/* ── TOAST ── */
+.toast{position:fixed;bottom:2rem;right:2rem;z-index:999;background:var(--surface);border:1px solid var(--accent);padding:.85rem 1.5rem;font-size:.75rem;color:var(--accent);letter-spacing:.08em;opacity:0;transition:opacity .35s;pointer-events:none;}
+.toast.show{opacity:1;}
+
+/* ── LOCKED OVERLAY ── */
+.locked-banner{background:var(--surface);border:1px solid rgba(0,255,178,.3);padding:2.5rem;text-align:center;margin:2rem 0;}
+.locked-icon{font-size:2rem;margin-bottom:1rem;color:var(--accent);}
+.locked-title{font-size:1.3rem;font-family:'DM Serif Display',Georgia,serif;color:var(--white);margin-bottom:.75rem;}
+.locked-sub{font-size:.82rem;color:var(--muted);margin-bottom:1.75rem;line-height:1.7;}
+
+/* ── RESPONSIVE ── */
+@media(max-width:700px){
+  nav{padding:1rem 1.25rem;}
+  .nav-center{gap:1.2rem;}
+  .page{padding:2rem 1.25rem 5rem;}
+  .form-grid{grid-template-columns:1fr;}
+  .gap-grid{grid-template-columns:1fr;}
+  .step-label{display:none;}
+  footer{padding:1.25rem;}
+  .hero{padding:3rem 1rem 3rem;}
+  .hero-stats{gap:2rem;}
+  .steps-row{grid-template-columns:1fr 1fr;}
+  .cta-banner{padding:2rem 1.25rem;}
+}
+</style>
+</head>
+<body>
+
+<!-- ── NAV ── -->
+<nav id="main-nav">
+  <div class="logo" onclick="navigate('home')">
+    <span class="logo-mark">◈</span>
+    <span class="logo-text">PATHFINDER</span>
+  </div>
+  <div class="nav-center">
+    <button class="nav-btn" id="nav-home"    onclick="navigate('home')">HOME</button>
+    <button class="nav-btn" id="nav-guidance" onclick="navigate('guidance')">GUIDANCE</button>
+    <button class="nav-btn" id="nav-explore" onclick="navigate('explore')">EXPLORE</button>
+  </div>
+  <div class="nav-right" id="nav-auth-area">
+    <!-- populated by JS -->
+  </div>
+</nav>
+
+<!-- ── MAIN PAGE CONTAINER ── -->
+<div id="page"></div>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div class="footer-logo">
+    <span class="logo-mark" style="font-size:1rem;">◈</span>
+    <span class="logo-text">PATHFINDER</span>
+  </div>
+  <div class="footer-links">
+    <button class="footer-link" onclick="navigate('home')">Home</button>
+    <button class="footer-link" onclick="navigate('guidance')">Guidance</button>
+    <button class="footer-link" onclick="navigate('explore')">Explore</button>
+    <button class="footer-link" onclick="openModal('login')">Login</button>
+  </div>
+  <span class="footer-copy">© 2025 Pathfinder. Your career clarity starts here.</span>
+</footer>
+
+<!-- ── AUTH MODAL ── -->
+<div class="modal-overlay" id="auth-modal">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal()">×</button>
+    <div class="modal-tag" id="modal-tag">ACCOUNT</div>
+    <h2 class="modal-title" id="modal-title">Welcome back.</h2>
+    <p class="modal-sub" id="modal-sub">Sign in to save your career profile and track your progress.</p>
+    <div class="modal-tabs">
+      <button class="modal-tab active" id="tab-login"  onclick="switchTab('login')">LOGIN</button>
+      <button class="modal-tab"        id="tab-signup" onclick="switchTab('signup')">SIGN UP</button>
+    </div>
+    <!-- LOGIN FORM -->
+    <div id="form-login">
+      <div class="modal-field">
+        <label class="lbl" for="li-email">EMAIL ADDRESS</label>
+        <input type="email" id="li-email" placeholder="you@example.com" />
+      </div>
+      <div class="modal-field">
+        <label class="lbl" for="li-pass">PASSWORD</label>
+        <input type="password" id="li-pass" placeholder="Enter password" />
+      </div>
+      <div class="modal-err" id="li-err"></div>
+      <button class="btn-primary" style="width:100%;margin-top:.5rem;" onclick="doLogin()">LOGIN →</button>
+      <div class="modal-footer-link">Don't have an account? <button onclick="switchTab('signup')">Sign up free</button></div>
+    </div>
+    <!-- SIGNUP FORM -->
+    <div id="form-signup" style="display:none;">
+      <div class="form-grid" style="margin-bottom:0;">
+        <div class="modal-field">
+          <label class="lbl" for="su-fname">FIRST NAME</label>
+          <input type="text" id="su-fname" placeholder="Priya" />
+        </div>
+        <div class="modal-field">
+          <label class="lbl" for="su-lname">LAST NAME</label>
+          <input type="text" id="su-lname" placeholder="Sharma" />
+        </div>
+      </div>
+      <div class="modal-field">
+        <label class="lbl" for="su-email">EMAIL ADDRESS</label>
+        <input type="email" id="su-email" placeholder="you@example.com" />
+      </div>
+      <div class="modal-field">
+        <label class="lbl" for="su-pass">PASSWORD</label>
+        <input type="password" id="su-pass" placeholder="Min. 6 characters" />
+      </div>
+      <div class="modal-field">
+        <label class="lbl" for="su-pass2">CONFIRM PASSWORD</label>
+        <input type="password" id="su-pass2" placeholder="Repeat password" />
+      </div>
+      <div class="modal-err" id="su-err"></div>
+      <div class="modal-success" id="su-ok"></div>
+      <button class="btn-primary" style="width:100%;margin-top:.5rem;" onclick="doSignup()">CREATE ACCOUNT →</button>
+      <div class="modal-footer-link">Already have an account? <button onclick="switchTab('login')">Login</button></div>
+    </div>
+  </div>
+</div>
+
+<!-- ── TOAST ── -->
+<div class="toast" id="toast"></div>
+
+<script>
+// ═══════════════════════════════════════════════
+//  DATABASE (localStorage)
+// ═══════════════════════════════════════════════
+
+async function analyzeWithBackend() {
+  console.log("Selected Role:", guidanceState.selectedRole);
+  try {
+    const response = await fetch("http://127.0.0.1:8000/analyze", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        degree: guidanceState.education,
+        skills: guidanceState.skills.join(", "),
+        year: guidanceState.experience,
+        role: guidanceState.selectedRole
+      })
+    });
+
+    const data = await response.json();
+    return data;
+
+  } catch (error) {
+    console.error("Backend error:", error);
+    return null;
+  }
+}
+const DB = {
+  getUsers(){ try{ return JSON.parse(localStorage.getItem('pf_users')||'[]'); }catch(e){return[];} },
+  saveUsers(u){ localStorage.setItem('pf_users', JSON.stringify(u)); },
+  findUser(email){ return this.getUsers().find(u=>u.email.toLowerCase()===email.toLowerCase()); },
+  register(first, last, email, pass){
+    const users = this.getUsers();
+    if(users.find(u=>u.email.toLowerCase()===email.toLowerCase())) return {ok:false,msg:'Email already registered.'};
+    const user = { id: Date.now().toString(), firstName:first, lastName:last, email, passwordHash: btoa(pass), createdAt: new Date().toISOString(), profiles:[] };
+    users.push(user);
+    this.saveUsers(users);
+    return {ok:true, user};
+  },
+  login(email, pass){
+    const user = this.findUser(email);
+    if(!user) return {ok:false,msg:'No account found with that email.'};
+    if(user.passwordHash !== btoa(pass)) return {ok:false,msg:'Incorrect password.'};
+    return {ok:true, user};
+  },
+  saveProfile(userId, profile){
+    const users = this.getUsers();
+    const u = users.find(u=>u.id===userId);
+    if(!u) return;
+    u.profiles = u.profiles || [];
+    u.profiles.push({...profile, savedAt: new Date().toISOString()});
+    this.saveUsers(users);
+  },
+  getSession(){ try{ return JSON.parse(sessionStorage.getItem('pf_session')||'null'); }catch(e){return null;} },
+  setSession(user){ sessionStorage.setItem('pf_session', JSON.stringify({id:user.id,firstName:user.firstName,lastName:user.lastName,email:user.email})); },
+  clearSession(){ sessionStorage.removeItem('pf_session'); },
+};
+
+// ═══════════════════════════════════════════════
+//  APP STATE
+// ═══════════════════════════════════════════════
+let currentPage = 'home';
+let currentUser = DB.getSession();
+let guidanceState = {
+  step: 0,
+  name: '',
+  education: '',
+  experience: '',
+  skills: [],
+  targetJob: '',
+  selectedRole: '',
+  result: null   // ✅ STORE BACKEND DATA
+};
+
+// ═══════════════════════════════════════════════
+//  NAVIGATION
+// ═══════════════════════════════════════════════
+function navigate(page){
+  currentPage = page;
+  ['home','guidance','explore'].forEach(p=>{
+    const el = document.getElementById('nav-'+p);
+    if(el) el.classList.toggle('active', p===page);
+  });
+  renderPage();
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+
+function renderPage(){
+  renderNavAuth();
+  const p = document.getElementById('page');
+  if(currentPage==='home')     { p.innerHTML = renderHome(); bindHome(); }
+  else if(currentPage==='guidance') { p.innerHTML = renderGuidancePage(); bindGuidancePage(); }
+  else if(currentPage==='explore')  { p.innerHTML = renderExplorePage(); }
+}
+
+function renderNavAuth(){
+  const area = document.getElementById('nav-auth-area');
+  if(currentUser){
+    area.innerHTML = `
+      <span class="nav-user">◈ ${esc(currentUser.firstName)}</span>
+      <button class="btn-sm" onclick="doLogout()">LOGOUT</button>`;
+  } else {
+    area.innerHTML = `
+      <button class="btn-sm" onclick="openModal('login')">LOGIN</button>
+      <button class="btn-sm filled" onclick="openModal('signup')">SIGN UP</button>`;
+  }
+}
+
+// ═══════════════════════════════════════════════
+//  MODAL
+// ═══════════════════════════════════════════════
+function openModal(tab='login'){
+  document.getElementById('auth-modal').classList.add('open');
+  switchTab(tab);
+}
+function closeModal(){
+  document.getElementById('auth-modal').classList.remove('open');
+  clearModalErrors();
+}
+function switchTab(tab){
+  document.getElementById('tab-login') .classList.toggle('active', tab==='login');
+  document.getElementById('tab-signup').classList.toggle('active', tab==='signup');
+  document.getElementById('form-login') .style.display = tab==='login'  ? '' : 'none';
+  document.getElementById('form-signup').style.display = tab==='signup' ? '' : 'none';
+  document.getElementById('modal-title').textContent = tab==='login' ? 'Welcome back.' : 'Create account.';
+  document.getElementById('modal-sub').textContent   = tab==='login'
+    ? 'Sign in to save your career profile and track your progress.'
+    : 'Join Pathfinder and get your personalised career plan.';
+  clearModalErrors();
+}
+function clearModalErrors(){
+  ['li-err','su-err','su-ok'].forEach(id=>{ const el=document.getElementById(id); if(el) el.textContent=''; });
+}
+
+// ── LOGIN ──
+function doLogin(){
+  const email = document.getElementById('li-email').value.trim();
+  const pass  = document.getElementById('li-pass').value;
+  const err   = document.getElementById('li-err');
+  if(!email||!pass){ err.textContent='Please fill in all fields.'; return; }
+  const res = DB.login(email, pass);
+  if(!res.ok){ err.textContent = res.msg; return; }
+  currentUser = res.user;
+  DB.setSession(res.user);
+  closeModal();
+  showToast(`Welcome back, ${res.user.firstName}!`);
+  renderNavAuth();
+}
+
+// ── SIGNUP ──
+function doSignup(){
+  const fname = document.getElementById('su-fname').value.trim();
+  const lname = document.getElementById('su-lname').value.trim();
+  const email = document.getElementById('su-email').value.trim();
+  const pass  = document.getElementById('su-pass').value;
+  const pass2 = document.getElementById('su-pass2').value;
+  const err   = document.getElementById('su-err');
+  const ok    = document.getElementById('su-ok');
+  err.textContent=''; ok.textContent='';
+  if(!fname||!lname||!email||!pass||!pass2){ err.textContent='Please fill in all fields.'; return; }
+  if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){ err.textContent='Enter a valid email address.'; return; }
+  if(pass.length<6){ err.textContent='Password must be at least 6 characters.'; return; }
+  if(pass!==pass2){ err.textContent='Passwords do not match.'; return; }
+  const res = DB.register(fname, lname, email, pass);
+  if(!res.ok){ err.textContent=res.msg; return; }
+  ok.textContent = 'Account created! Logging you in…';
+  currentUser = res.user;
+  DB.setSession(res.user);
+  setTimeout(()=>{ closeModal(); showToast(`Welcome to Pathfinder, ${fname}!`); renderNavAuth(); }, 900);
+}
+
+// ── LOGOUT ──
+function doLogout(){
+  currentUser = null;
+  DB.clearSession();
+  renderNavAuth();
+  showToast('Logged out successfully.');
+}
+
+// ═══════════════════════════════════════════════
+//  TOAST
+// ═══════════════════════════════════════════════
+function showToast(msg){
+  const t = document.getElementById('toast');
+  t.textContent = msg; t.classList.add('show');
+  setTimeout(()=>t.classList.remove('show'), 3000);
+}
+
+// ═══════════════════════════════════════════════
+//  UTILITIES
+// ═══════════════════════════════════════════════
+function esc(str){
+  return String(str).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+function badge(text, color){
+  return `<span class="badge" style="border-color:${color}44;color:${color}">${esc(text)}</span>`;
+}
+
+// ═══════════════════════════════════════════════
+//  DATA
+// ═══════════════════════════════════════════════
+const SKILL_DB = {
+  "Software Engineer":  { required:["JavaScript","Data Structures","System Design","Git","REST APIs","Testing","SQL"], nice:["TypeScript","Cloud (AWS/GCP)","Docker","CI/CD"] },
+  "Data Scientist":     { required:["Python","Machine Learning","Statistics","SQL","Data Visualization","Pandas"], nice:["Deep Learning","Spark","R","A/B Testing"] },
+  "UX Designer":        { required:["Figma","User Research","Wireframing","Prototyping","Design Thinking"], nice:["CSS","Motion Design","Accessibility","Design Systems"] },
+  "Product Manager":    { required:["Product Strategy","User Research","Data Analysis","Roadmapping","Stakeholder Management"], nice:["SQL","A/B Testing","Agile","Competitive Analysis"] },
+  "DevOps Engineer":    { required:["Linux","Docker","Kubernetes","CI/CD","Cloud (AWS/GCP)","Scripting","Monitoring"], nice:["Terraform","Ansible","Security","Networking"] },
+  "Marketing Manager":  { required:["SEO/SEM","Content Strategy","Social Media","Data Analytics","Campaign Management"], nice:["Email Marketing","CRM Tools","Copywriting","Budget Management"] },
+  "Financial Analyst":  { required:["Excel/Sheets","Financial Modeling","Accounting","Data Analysis","Forecasting"], nice:["Python","SQL","Power BI","Bloomberg Terminal"] },
+  "Graphic Designer":   { required:["Adobe Photoshop","Illustrator","Typography","Color Theory","Brand Design"], nice:["After Effects","Figma","3D Design","Print Production"] },
+};
+const TIPS = {
+  "JavaScript":             {resource:"freeCodeCamp / Eloquent JavaScript",duration:"4–8 weeks",type:"Online Course"},
+  "Python":                 {resource:"Python.org / Automate the Boring Stuff",duration:"3–6 weeks",type:"Online Course"},
+  "Machine Learning":       {resource:"Andrew Ng's ML Course (Coursera)",duration:"8–12 weeks",type:"Certification"},
+  "Data Structures":        {resource:"LeetCode + Neetcode.io",duration:"6–10 weeks",type:"Practice Platform"},
+  "System Design":          {resource:"System Design Interview (Book) + Grokking",duration:"4–6 weeks",type:"Book + Course"},
+  "SQL":                    {resource:"Mode Analytics SQL Tutorial",duration:"2–3 weeks",type:"Free Tutorial"},
+  "Figma":                  {resource:"Figma Learn resources + YouTube",duration:"2–4 weeks",type:"Free Tool"},
+  "User Research":          {resource:"Nielsen Norman Group + Coursera",duration:"4–6 weeks",type:"Course"},
+  "Docker":                 {resource:"Docker Get Started official guide",duration:"2–3 weeks",type:"Documentation"},
+  "Product Strategy":       {resource:"Inspired by Marty Cagan + Reforge",duration:"6–8 weeks",type:"Book + Program"},
+  "SEO/SEM":                {resource:"Google Skillshop + Moz Blog",duration:"3–4 weeks",type:"Free Certification"},
+  "Financial Modeling":     {resource:"CFI's Financial Modeling Course",duration:"6–8 weeks",type:"Certification"},
+  "Adobe Photoshop":        {resource:"Adobe tutorials + Skillshare",duration:"3–5 weeks",type:"Video Tutorials"},
+  "Statistics":             {resource:"Khan Academy + StatQuest YouTube",duration:"4–6 weeks",type:"Free Course"},
+  "Git":                    {resource:"GitHub Learning Lab + Pro Git Book",duration:"1–2 weeks",type:"Free Platform"},
+  "Linux":                  {resource:"Linux Foundation Intro Course",duration:"3–4 weeks",type:"Online Course"},
+  "Data Visualization":     {resource:"Tableau Public + D3.js Tutorials",duration:"3–4 weeks",type:"Free Tools"},
+  "REST APIs":              {resource:"Postman Learning Center + freeCodeCamp",duration:"2–3 weeks",type:"Free Tutorial"},
+  "Testing":                {resource:"Test Automation University",duration:"3–4 weeks",type:"Free Platform"},
+  "Wireframing":            {resource:"Balsamiq Academy + UX Collective",duration:"2–3 weeks",type:"Tutorial"},
+  "Prototyping":            {resource:"Figma Prototyping Docs + InVision",duration:"2–3 weeks",type:"Tool Tutorials"},
+  "Design Thinking":        {resource:"IDEO Design Thinking Course (Coursera)",duration:"4–5 weeks",type:"Certification"},
+  "Data Analysis":          {resource:"Google Data Analytics Certificate (Coursera)",duration:"6 months",type:"Certification"},
+  "Data Analytics":         {resource:"Google Data Analytics Certificate (Coursera)",duration:"6 months",type:"Certification"},
+  "Roadmapping":            {resource:"ProductPlan Blog + Mind the Product",duration:"2–3 weeks",type:"Articles"},
+  "Stakeholder Management": {resource:"PMI PMP / Coursera Project Management",duration:"6–8 weeks",type:"Certification"},
+  "CI/CD":                  {resource:"GitHub Actions Docs + Jenkins Tutorial",duration:"2–3 weeks",type:"Documentation"},
+  "Kubernetes":             {resource:"Kubernetes.io Official Tutorials",duration:"4–6 weeks",type:"Documentation"},
+  "Cloud (AWS/GCP)":        {resource:"AWS Cloud Practitioner / Google ACE Exam",duration:"6–8 weeks",type:"Certification"},
+  "Content Strategy":       {resource:"Content Marketing Institute + HubSpot Academy",duration:"3–4 weeks",type:"Free Cert"},
+  "Campaign Management":    {resource:"Google Ads Cert + Meta Blueprint",duration:"3–4 weeks",type:"Certification"},
+  "Excel/Sheets":           {resource:"ExcelJet + Coursera Excel Skills for Business",duration:"3–4 weeks",type:"Course"},
+  "Accounting":             {resource:"AccountingCoach.com + Coursera Accounting",duration:"4–6 weeks",type:"Course"},
+  "Typography":             {resource:"Google Fonts Knowledge + Canva Design School",duration:"1–2 weeks",type:"Free Articles"},
+  "Color Theory":           {resource:"Canva Design School + Adobe Color Guide",duration:"1–2 weeks",type:"Free Articles"},
+  "Brand Design":           {resource:"Skillshare Branding + Pentagram Case Studies",duration:"4–6 weeks",type:"Course"},
+  "Pandas":                 {resource:"Pandas official docs + Kaggle Learn",duration:"2–3 weeks",type:"Documentation"},
+  "Scripting":              {resource:"Bash Scripting Udemy + Linux Command Line",duration:"2–3 weeks",type:"Course"},
+  "Monitoring":             {resource:"Prometheus + Grafana official tutorials",duration:"2–3 weeks",type:"Documentation"},
+  "Forecasting":            {resource:"Forecasting Principles and Practice (free book)",duration:"4–6 weeks",type:"Free Book"},
+  "Social Media":           {resource:"Hootsuite Academy + Meta Blueprint",duration:"2–3 weeks",type:"Certification"},
+  "Illustrator":            {resource:"Adobe Illustrator Tutorials + Skillshare",duration:"3–4 weeks",type:"Video Tutorials"},
+};
+const NOW_JOBS = {
+  "Software Engineer":  ["Junior Frontend Developer","React Developer","QA Engineer","Technical Support Engineer","Web Developer"],
+  "Data Scientist":     ["Data Analyst","Business Intelligence Analyst","Junior ML Engineer","Research Assistant","Reporting Analyst"],
+  "UX Designer":        ["Junior UI Designer","Visual Designer","UX Researcher","Product Designer Intern","Interaction Designer"],
+  "Product Manager":    ["Associate Product Manager","Business Analyst","Project Coordinator","Growth Analyst","Operations Analyst"],
+  "DevOps Engineer":    ["Systems Administrator","Cloud Support Engineer","Junior DevOps","Site Reliability Engineer","IT Operations"],
+  "Marketing Manager":  ["Digital Marketing Specialist","Social Media Manager","Content Writer","SEO Specialist","Marketing Coordinator"],
+  "Financial Analyst":  ["Junior Financial Analyst","Accounts Executive","Budget Analyst","Financial Reporting Analyst","Audit Associate"],
+  "Graphic Designer":   ["Junior Designer","Social Media Designer","UI Designer","Brand Coordinator","Motion Designer"],
+};
+const EDUCATION_LEVELS = ["High School","Diploma","Bachelor's Degree","Master's Degree","PhD","Bootcamp / Self-Taught"];
+const JOB_OPTIONS = Object.keys(SKILL_DB);
+const ALL_SKILLS = ["JavaScript","Python","React","Node.js","Java","C++","SQL","Machine Learning","Data Structures","System Design","Git","REST APIs","Testing","TypeScript","Figma","User Research","Wireframing","Prototyping","Design Thinking","Photoshop","Product Strategy","Roadmapping","Stakeholder Management","Agile","Data Analysis","Docker","Kubernetes","Linux","CI/CD","Cloud (AWS/GCP)","Scripting","Monitoring","SEO/SEM","Content Strategy","Social Media","Campaign Management","Copywriting","Excel/Sheets","Financial Modeling","Accounting","Forecasting","Statistics","Adobe Photoshop","Illustrator","Typography","Color Theory","Brand Design","Pandas","Data Visualization","R","Deep Learning","Spark","Data Analytics"];
+const STEPS = ["Profile","Target Job","Skill Gap","Improve","Apply Now"];
+
+// ═══════════════════════════════════════════════
+//  HOME PAGE
+// ═══════════════════════════════════════════════
+function renderHome(){
+  const greeting = currentUser ? `Welcome back, ${esc(currentUser.firstName)}.` : 'Find Your <span class="hero-accent">True North.</span>';
+  return `
+  <div class="page page-wide">
+
+    <!-- HERO -->
+    <div class="hero">
+      <div class="hero-badge">CAREER INTELLIGENCE PLATFORM</div>
+      <h1 class="hero-title">${greeting}</h1>
+      <p class="hero-sub">Clarity over confusion. Data-driven career paths, skill gap analysis, and a personalised learning roadmap — all in one place.</p>
+      <div class="hero-btns">
+        <button class="btn-primary" onclick="navigate('guidance')" style="font-size:.82rem;padding:1rem 2.2rem;">START MY CAREER PLAN →</button>
+        <button class="btn-ghost"   onclick="navigate('explore')"  style="font-size:.82rem;padding:1rem 2.2rem;">EXPLORE PATHS</button>
+      </div>
+      <div class="hero-stats">
+        <div><span class="stat-num">8</span><span class="stat-lbl">CAREER DOMAINS</span></div>
+        <div><span class="stat-num">50+</span><span class="stat-lbl">ROLES MAPPED</span></div>
+        <div><span class="stat-num">40+</span><span class="stat-lbl">SKILL RESOURCES</span></div>
+        <div><span class="stat-num">5</span><span class="stat-lbl">STEP PROCESS</span></div>
+      </div>
+    </div>
+
+    <!-- FEATURES -->
+    <div class="features-grid">
+      ${[
+        {icon:'◈',title:'Career Guidance',desc:'Enter your education and skills, pick your target role, and get an instant gap analysis with a learning roadmap.',action:"navigate('guidance')"},
+        {icon:'⬡',title:'Skill Gap Analysis',desc:'See exactly which skills you have, which are missing, and which are nice-to-haves for your dream job.',action:"navigate('guidance')"},
+        {icon:'✦',title:'Learning Roadmap',desc:'Curated courses, books, and platforms for every missing skill — with realistic time estimates.',action:"navigate('guidance')"},
+        {icon:'◉',title:'Jobs You Can Apply',desc:'Discover roles you qualify for right now, and a clear path to land your target role.',action:"navigate('explore')"},
+      ].map(f=>`
+        <div class="feature-card" onclick="${f.action}">
+          <div class="feature-icon">${f.icon}</div>
+          <div class="feature-title">${esc(f.title)}</div>
+          <div class="feature-desc">${esc(f.desc)}</div>
+          <div class="feature-arrow">→</div>
+        </div>`).join('')}
+    </div>
+
+    <!-- HOW IT WORKS -->
+    <div class="how-section">
+      <div class="section-tag">HOW IT WORKS</div>
+      <div class="section-title">Five steps to career clarity.</div>
+      <p class="section-sub">No fluff. No generic advice. Just a precise, personalised plan built on your actual profile.</p>
+      <div class="steps-row">
+        ${[
+          {n:'01',t:'Your Profile',d:'Enter your name, education, experience and current skill set.'},
+          {n:'02',t:'Target Job',d:'Choose the role you want to land from 8 career domains.'},
+          {n:'03',t:'Skill Gap',d:'Get an instant readiness score and a breakdown of missing skills.'},
+          {n:'04',t:'Improve',d:'Follow a curated resource list to fill every gap efficiently.'},
+          {n:'05',t:'Apply Now',d:'See roles you can apply for today while you build toward your goal.'},
+        ].map(s=>`
+          <div class="step-how">
+            <div class="step-how-num">${s.n}</div>
+            <div class="step-how-title">${esc(s.t)}</div>
+            <div class="step-how-desc">${esc(s.d)}</div>
+          </div>`).join('')}
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="cta-banner">
+      <div class="cta-banner-title">${currentUser ? 'Ready to continue your journey?' : 'Ready to find your direction?'}</div>
+      <p class="cta-banner-sub">${currentUser ? `Pick up where you left off, ${esc(currentUser.firstName)}. Your career plan is waiting.` : 'Create a free account to save your progress and revisit your career plan anytime.'}</p>
+      ${currentUser
+        ? `<button class="btn-primary" onclick="navigate('guidance')" style="font-size:.8rem;padding:.9rem 2rem;">OPEN CAREER GUIDANCE →</button>`
+        : `<div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+             <button class="btn-primary" onclick="openModal('signup')" style="font-size:.8rem;padding:.9rem 2rem;">CREATE FREE ACCOUNT →</button>
+             <button class="btn-ghost"   onclick="openModal('login')"  style="font-size:.8rem;padding:.9rem 2rem;">LOGIN</button>
+           </div>`}
+    </div>
+
+  </div>`;
+}
+
+function bindHome(){ /* click handlers inline */ }
+
+// ═══════════════════════════════════════════════
+//  EXPLORE PAGE
+// ═══════════════════════════════════════════════
+function renderExplorePage(){
+  const domains = [
+    {id:"Software Engineer",  icon:"⬡", col:"#00FFB2", salary:"$90k–$200k", growth:"↑ 25%"},
+    {id:"Data Scientist",     icon:"◉", col:"#38BDF8", salary:"$95k–$190k", growth:"↑ 28%"},
+    {id:"UX Designer",        icon:"◈", col:"#A78BFA", salary:"$75k–$155k", growth:"↑ 16%"},
+    {id:"Product Manager",    icon:"✦", col:"#FFD93D", salary:"$90k–$185k", growth:"↑ 19%"},
+    {id:"DevOps Engineer",    icon:"⊕", col:"#FB923C", salary:"$100k–$200k",growth:"↑ 22%"},
+    {id:"Marketing Manager",  icon:"⬟", col:"#F472B6", salary:"$60k–$130k", growth:"↑ 10%"},
+    {id:"Financial Analyst",  icon:"◇", col:"#34D399", salary:"$65k–$150k", growth:"↑ 9%"},
+    {id:"Graphic Designer",   icon:"⊞", col:"#F87171", salary:"$50k–$120k", growth:"↑ 8%"},
+  ];
+  return `
+  <div class="page page-wide">
+    <div class="section-tag" style="text-align:left;margin-bottom:.75rem;">CAREER DOMAINS</div>
+    <h1 style="margin-bottom:.5rem;">Explore Your Options</h1>
+    <p class="sub" style="margin-bottom:2.5rem;">Eight major fields. Dozens of paths. One that's yours.</p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.5rem;">
+      ${domains.map(d=>`
+        <div class="feature-card" onclick="navigate('guidance')" style="border-color:var(--border);" onmouseover="this.style.borderColor='${d.col}';this.style.boxShadow='0 0 28px ${d.col}18'" onmouseout="this.style.borderColor='var(--border)';this.style.boxShadow='none'">
+          <div class="feature-icon" style="color:${d.col}">${d.icon}</div>
+          <div class="feature-title">${esc(d.id)}</div>
+          <div class="feature-desc">${SKILL_DB[d.id].required.slice(0,3).join(' · ') + ' …'}</div>
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-top:.75rem;">
+            <span style="font-size:.75rem;color:${d.col};font-weight:600;">${d.salary}</span>
+            <span style="font-size:.68rem;color:var(--faint);">${d.growth} by 2030</span>
+          </div>
+        </div>`).join('')}
+    </div>
+    <div class="cta-banner" style="margin-top:3rem;">
+      <div class="cta-banner-title">Find your perfect match.</div>
+      <p class="cta-banner-sub">Enter your skills and let Pathfinder do the analysis — instantly.</p>
+      <button class="btn-primary" onclick="navigate('guidance')" style="font-size:.8rem;padding:.9rem 2rem;">START CAREER GUIDANCE →</button>
+    </div>
+  </div>`;
+}
+
+// ═══════════════════════════════════════════════
+//  GUIDANCE PAGE (5 STEPS)
+// ═══════════════════════════════════════════════
+function renderGuidancePage(){
+  const s = guidanceState;
+  if(!currentUser){
+    return `
+    <div class="page">
+      <div class="locked-banner">
+        <div class="locked-icon">◈</div>
+        <div class="locked-title">Sign in to unlock Career Guidance</div>
+        <p class="locked-sub">Create a free account to access your personalised 5-step career plan, skill gap analysis, and learning roadmap. Your progress is saved automatically.</p>
+        <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+          <button class="btn-primary" onclick="openModal('signup')">CREATE FREE ACCOUNT →</button>
+          <button class="btn-ghost"   onclick="openModal('login')">LOGIN</button>
+        </div>
+      </div>
+    </div>`;
+  }
+  switch(s.step){
+    case 0: return `<div class="page">${renderStep0()}</div>`;
+    case 1: return `<div class="page">${stepBarHTML()}${renderStep1()}</div>`;
+    case 2: return `<div class="page">${stepBarHTML()}${renderStep2()}</div>`;
+    case 3: return `<div class="page">${stepBarHTML()}${renderStep3()}</div>`;
+    case 4: return `<div class="page">${stepBarHTML()}${renderStep4()}</div>`;
+  }
+}
+
+function bindGuidancePage(){
+  if(!currentUser) return;
+  document.querySelectorAll('.step-circle.done').forEach(el=>{
+    el.addEventListener('click',()=>{ guidanceState.step=+el.dataset.step; refreshGuidance(); });
+  });
+  const s = guidanceState.step;
+  try {
+    if(s === 0) bindStep0();
+    if(s === 1) bindStep1();
+    if(s === 2) bindStep2();
+    if(s === 3) bindStep3();
+    if(s === 4) bindStep4();
+  } catch (err) {
+    console.error("Bind error:", err);
+  }
+}
+
+async function refreshGuidance(){
+  const p = document.getElementById('page');
+
+  try {
+    if (guidanceState.step === 2) {
+      const data = await analyzeWithBackend();
+
+      if (!data) {
+        p.innerHTML = "<p>Error loading data</p>";
+        return;
+      }
+
+      guidanceState.result = data;   // ✅ STORE RESULT
+      p.innerHTML = renderGuidancePage();
+    }
+
+    else {
+      p.innerHTML = renderGuidancePage();
+    }
+
+    bindGuidancePage();
+
+  } catch (err) {
+    console.error("UI Crash:", err);
+    p.innerHTML = "<h2>Something broke. Check console.</h2>";
+  }
+}
+
+// ─── STEP BAR ───
+function stepBarHTML(){
+  const s = guidanceState.step;
+  let h = '<div class="step-bar">';
+  STEPS.forEach((label,i)=>{
+    const done=i<s, active=i===s;
+    h += `<div class="step-item">
+      <div class="step-circle ${done?'done':active?'active':''}" data-step="${i}">${done?'✓':i+1}</div>
+      <span class="step-label ${done||active?'active':''}">${label.toUpperCase()}</span>
+    </div>`;
+    if(i<STEPS.length-1) h+=`<div class="step-line ${done?'done':''}"></div>`;
+  });
+  return h+'</div>';
+}
+
+// ─── GAP CALC ───
+function getGap(){
+  const job = guidanceState.targetJob;
+  if(!job||!SKILL_DB[job]) return {missing:[],strong:[],niceToHave:[]};
+  const req=SKILL_DB[job].required, nice=SKILL_DB[job].nice;
+  const ul=guidanceState.skills.map(s=>s.toLowerCase());
+  const m=sk=>ul.some(u=>u.includes(sk.toLowerCase())||sk.toLowerCase().includes(u));
+  return {missing:req.filter(s=>!m(s)),strong:req.filter(s=>m(s)),niceToHave:nice.filter(s=>!m(s))};
+}
+function pct(strong,total){return total?Math.round(strong/total*100):0;}
+function pctCol(p){return p>=70?'var(--accent)':p>=40?'var(--warn)':'var(--danger)';}
+
+// ─── STEP 0 ───
+function renderStep0(){
+  const chips = guidanceState.skills.map(sk=>`<span class="chip">${esc(sk)}<button class="chip-x" data-remove="${esc(sk)}">×</button></span>`).join('');
+  return `
+    <div class="tag">STEP 01 — YOUR PROFILE</div>
+    <h1>Tell us about yourself.</h1>
+    <p class="sub">Enter your education, experience and current skills to get a personalised career plan.</p>
+    <div class="card" style="margin-bottom:1.5rem">
+      <div class="form-grid">
+        <div><label class="lbl" for="inp-name">FULL NAME</label>
+          <input type="text" id="inp-name" placeholder="e.g. Priya Sharma" value="${esc(guidanceState.name)}" /></div>
+        <div><label class="lbl" for="inp-edu">EDUCATION LEVEL</label>
+          <select id="inp-edu">
+            <option value="">Select level…</option>
+            ${EDUCATION_LEVELS.map(e=>`<option value="${esc(e)}" ${guidanceState.education===e?'selected':''}>${esc(e)}</option>`).join('')}
+          </select></div>
+      </div>
+      <div style="margin-bottom:1.25rem">
+        <label class="lbl" for="inp-exp">YEARS OF EXPERIENCE (optional)</label>
+        <input type="text" id="inp-exp" placeholder="e.g. 2 years in web development" value="${esc(guidanceState.experience)}" />
+      </div>
+      <div>
+        <label class="lbl">YOUR CURRENT SKILLS</label>
+        <div class="skills-wrap" id="skills-wrap">${chips}</div>
+        <div class="ac-wrap">
+          <input type="text" id="skill-input" placeholder="Type a skill and press Enter or select…" autocomplete="off" />
+          <div class="ac-dropdown" id="ac-dropdown"></div>
+        </div>
+        <p class="hint">Press Enter or click suggestion. You can type custom skills too.</p>
+      </div>
+    </div>
+    <div class="btn-row" style="margin-top:0;">
+      <button class="btn-primary ${guidanceState.name&&guidanceState.education?'':'disabled'}" id="btn-next0">NEXT: PICK TARGET JOB →</button>
+    </div>`;
+}
+
+function bindStep0(){
+  const ni=document.getElementById('inp-name');
+  const ei=document.getElementById('inp-edu');
+  const xi=document.getElementById('inp-exp');
+  const si=document.getElementById('skill-input');
+  const dd=document.getElementById('ac-dropdown');
+  const bn=document.getElementById('btn-next0');
+  ni.addEventListener('input',e=>{guidanceState.name=e.target.value;bn.classList.toggle('disabled',!(guidanceState.name.trim()&&guidanceState.education));});
+  ei.addEventListener('change',e=>{guidanceState.education=e.target.value;bn.classList.toggle('disabled',!(guidanceState.name.trim()&&guidanceState.education));});
+  xi.addEventListener('input',e=>guidanceState.experience=e.target.value);
+  bn.addEventListener('click',()=>{if(guidanceState.name.trim()&&guidanceState.education){guidanceState.step=1;refreshGuidance();}});
+  si.addEventListener('input',()=>{
+    const v=si.value.trim().toLowerCase();
+    if(!v){dd.innerHTML='';dd.classList.remove('open');return;}
+    const m=ALL_SKILLS.filter(s=>s.toLowerCase().includes(v)&&!guidanceState.skills.includes(s)).slice(0,6);
+    if(!m.length){dd.innerHTML='';dd.classList.remove('open');return;}
+    dd.innerHTML=m.map(s=>`<div class="ac-item" data-skill="${esc(s)}">${esc(s)}</div>`).join('');
+    dd.classList.add('open');
+  });
+  si.addEventListener('keydown',e=>{if(e.key==='Enter'&&si.value.trim()){addSkill(si.value.trim());si.value='';dd.classList.remove('open');}});
+  dd.addEventListener('mousedown',e=>{const it=e.target.closest('.ac-item');if(it){addSkill(it.dataset.skill);si.value='';dd.classList.remove('open');}});
+  document.addEventListener('click',e=>{if(!e.target.closest('.ac-wrap'))dd.classList.remove('open');});
+  document.getElementById('skills-wrap').addEventListener('click',e=>{
+    const b=e.target.closest('.chip-x');if(b){guidanceState.skills=guidanceState.skills.filter(s=>s!==b.dataset.remove);refreshGuidance();}
+  });
+}
+
+function addSkill(skill){
+  if(skill&&!guidanceState.skills.includes(skill)) guidanceState.skills.push(skill);
+  const w=document.getElementById('skills-wrap');
+  if(w) w.innerHTML=guidanceState.skills.map(sk=>`<span class="chip">${esc(sk)}<button class="chip-x" data-remove="${esc(sk)}">×</button></span>`).join('');
+}
+
+// ─── STEP 1 ───
+function renderStep1(){
+  return `
+    <div class="tag">STEP 02 — TARGET JOB</div>
+    <h1>Which role are you aiming for?</h1>
+    <p class="sub">Select the job you want to land. We'll compare its requirements against your profile.</p>
+    <div class="job-grid">
+      ${JOB_OPTIONS.map(job=>`
+        <div class="job-card ${guidanceState.targetJob===job?'selected':''}" data-job="${esc(job)}">
+          <div class="job-card-title">${esc(job)}</div>
+          <div class="job-card-sub">${SKILL_DB[job].required.length} core skills required</div>
+        </div>`).join('')}
+    </div>
+    <div class="btn-row">
+      <button class="btn-ghost" id="btn-back1">← BACK</button>
+      <button class="btn-primary ${guidanceState.targetJob?'':'disabled'}" id="btn-next1">ANALYSE MY SKILLS →</button>
+    </div>`;
+}
+function bindStep1(){
+  document.getElementById('btn-back1')?.addEventListener('click',()=>{guidanceState.step=0;refreshGuidance();});
+  const bn=document.getElementById('btn-next1');
+  bn.addEventListener('click',()=>{if(guidanceState.targetJob){guidanceState.step=2;refreshGuidance();}});
+  document.querySelectorAll('.job-card').forEach(c=>{
+    c.addEventListener('click',()=>{
+      guidanceState.targetJob=c.dataset.job;
+      guidanceState.selectedRole = c.dataset.job;
+      document.querySelectorAll('.job-card').forEach(x=>{
+        x.classList.toggle('selected',x.dataset.job===guidanceState.targetJob);
+        x.querySelector('.job-card-title').style.color=x.dataset.job===guidanceState.targetJob?'var(--accent)':'var(--white)';
+      });
+      bn.classList.remove('disabled');
+    });
+  });
+}
+
+// ─── STEP 2 ───
+function renderStep2(){
+  const data = guidanceState.result;
+
+  if (!data) return "<p>Loading...</p>";
+
+  return `
+  <div class="result-card">
+
+    <div class="result-header">
+      <h1>🎯 ${data.role}</h1>
+      <p class="readiness">Readiness: ${data.readiness}%</p>
+    </div>
+
+    <div class="section">
+      <h2>📉 Missing Skills</h2>
+      <div class="chips">
+        ${data.missing_skills.map(s => `<span class="chip">${s}</span>`).join("")}
+      </div>
+    </div>
+
+    ${
+      data.projects?.length > 0
+        ? `
+        <div class="section">
+          <h2>🧠 Projects</h2>
+          ${data.projects.map(p => `
+            <div class="project-box">
+              <h3>${p.name}</h3>
+              <ul>
+                ${p.features.map(f => `<li>${f}</li>`).join("")}
+              </ul>
+            </div>
+          `).join("")}
+        </div>
+        `
+        : ""
+    }
+
+    <div class="btn-row">
+      <button class="btn-ghost" onclick="goBackToStep1()">← BACK</button>
+      <button class="btn-primary" onclick="goToNextStep()">Next →</button>
+    </div>
+
+  </div>
+  `;
+}
+function bindStep2(){
+  document.getElementById('btn-back2')?.addEventListener('click',()=>{guidanceState.step=1;refreshGuidance();});
+  document.getElementById('btn-next2')?.addEventListener('click',()=>{guidanceState.step=3;refreshGuidance();});
+}
+
+// ─── STEP 3 ───
+function renderStep3(){
+  const data = guidanceState.result;
+
+  if (!data) return "<p>Loading...</p>";
+
+  const missing = data.missing_skills || [];
+  const resources = data.resources || { free: [], paid: [] };
+
+  return `
+    <div class="tag">STEP 04 — LEARNING RESOURCES</div>
+    <h1>Your learning roadmap.</h1>
+
+    <div class="section">
+      <h3>📉 Skills to Learn</h3>
+      <ul>
+        ${missing.map(s => `<li>${s}</li>`).join("")}
+      </ul>
+    </div>
+
+    <div class="section">
+      <h3>🆓 Free Resources</h3>
+      <ul>
+        ${resources.free.map(r => `<li><a href="${r}" target="_blank">${r}</a></li>`).join("")}
+      </ul>
+    </div>
+
+    <div class="section">
+      <h3>💰 Paid Resources</h3>
+      <ul>
+        ${resources.paid.map(r => `<li><a href="${r}" target="_blank">${r}</a></li>`).join("")}
+      </ul>
+    </div>
+
+    <div class="btn-row">
+      <button class="btn-ghost" onclick="goBackToStep2()">← BACK</button>
+      <button class="btn-primary" onclick="goToStep4()">Finish →</button>
+    </div>
+  `;
+}
+function bindStep3(){
+  document.getElementById('btn-back3')?.addEventListener('click',()=>{guidanceState.step=2;refreshGuidance();});
+  document.getElementById('btn-next3')?.addEventListener('click',()=>{guidanceState.step=4;refreshGuidance();});
+}
+
+// ─── STEP 4 ───
+function renderStep4(){
+  const {missing,strong}=getGap();
+  const tot=SKILL_DB[guidanceState.targetJob]?.required.length||1;
+  const p=pct(strong.length,tot);
+  const gCol=missing.length===0?'var(--accent)':'var(--danger)';
+  const nowCards=(NOW_JOBS[guidanceState.targetJob]||[]).map((job,i)=>`
+    <div class="now-card">
+      <div><div class="now-title">${esc(job)}</div><div class="now-sub">${esc(guidanceState.targetJob)} track · Entry–Mid level</div></div>
+      <div class="now-right">${badge(i===0?'BEST MATCH':'GOOD FIT',i===0?'var(--accent)':'var(--purple)')}<span class="arrow">→</span></div>
+    </div>`).join('');
+  const ctaMsg=missing.length>0
+    ?`Learn ${missing.slice(0,2).map(s=>esc(s)).join(' + ')}${missing.length>2?` &amp; ${missing.length-2} more`:''} to unlock ${esc(guidanceState.targetJob)} roles.`
+    :`You're ready — start applying for ${esc(guidanceState.targetJob)} positions today.`;
+  return `
+    <div class="tag">STEP 05 — JOBS YOU CAN APPLY NOW</div>
+    <h1>Roles within your reach.</h1>
+    <p class="sub">Based on your current skills, here are roles you're already qualified for or very close to.</p>
+    <div class="card summary-strip">
+      <div class="summary-item"><div class="summary-lbl">TARGET ROLE</div><div class="summary-val" style="color:var(--white)">${esc(guidanceState.targetJob)}</div><div class="summary-sub">${p}% ready</div></div>
+      <div class="summary-item"><div class="summary-lbl">YOUR SKILLS</div><div class="summary-val" style="color:var(--white)">${guidanceState.skills.length} skills</div><div class="summary-sub">${strong.length} match target</div></div>
+      <div class="summary-item"><div class="summary-lbl">GAPS TO CLOSE</div><div class="summary-val" style="color:${gCol}">${missing.length} skill${missing.length!==1?'s':''}</div><div class="summary-sub">${missing.length===0?'Fully ready!':'See roadmap'}</div></div>
+    </div>
+    <div class="section-label">APPLY RIGHT NOW</div>
+    ${nowCards}
+    <div class="cta-box">
+      <div class="cta-mini-tag">YOUR NEXT MOVE</div>
+      <p class="cta-text">${ctaMsg}</p>
+      <div class="cta-btns">
+        <button class="btn-primary" id="btn-back4">← VIEW LEARNING PLAN</button>
+        <button class="btn-ghost" id="btn-restart">START OVER</button>
+        ${currentUser?`<button class="btn-ghost" id="btn-save" style="border-color:var(--accent);color:var(--accent);">⊕ SAVE PROFILE</button>`:''}
+      </div>
+    </div>`;
+}
+function bindStep4(){
+  document.getElementById('btn-back4')?.addEventListener('click',()=>{guidanceState.step=3;refreshGuidance();});
+  document.getElementById('btn-restart')?.addEventListener('click',()=>{
+    guidanceState={step:0,name:'',education:'',experience:'',skills:[],targetJob:''};
+    refreshGuidance();
+  });
+  const saveBtn=document.getElementById('btn-save');
+  if(saveBtn){
+    saveBtn.addEventListener('click',()=>{
+      DB.saveProfile(currentUser.id,{
+        name:guidanceState.name, education:guidanceState.education,
+        experience:guidanceState.experience, skills:guidanceState.skills,
+        targetJob:guidanceState.targetJob,
+      });
+      showToast('Profile saved to your account!');
+      saveBtn.textContent='✓ SAVED';
+      saveBtn.disabled=true;
+    });
+  }
+}
+
+// ── MODAL CLOSE ON OVERLAY CLICK ──
+document.getElementById('auth-modal').addEventListener('click',e=>{
+  if(e.target===e.currentTarget) closeModal();
+});
+
+// ── CLOSE MODAL ON ESC ──
+document.addEventListener('keydown',e=>{ if(e.key==='Escape') closeModal(); });
+
+// ── INIT ──
+renderPage();
+function goToNextStep(){
+  guidanceState.step = 3;
+  refreshGuidance();
+}
+
+function goBackToStep1(){
+  guidanceState.step = 1;
+  refreshGuidance();
+}
+
+function goBackToStep2(){
+  guidanceState.step = 2;
+  refreshGuidance();
+}
+
+function goToStep4(){
+  guidanceState.step = 4;
+  refreshGuidance();
+}
+</script>
+</body>
+</html>
