@@ -327,7 +327,7 @@ footer{border-top:1px solid var(--border);padding:1.75rem 3rem;display:flex;just
 async function analyzeWithBackend() {
   console.log("Selected Role:", guidanceState.selectedRole);
   try {
-    const response = await fetch("http://127.0.0.1:8000/analyze", {
+    const response = await fetch("https://pathfinder-2-q92c.onrender.com", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
